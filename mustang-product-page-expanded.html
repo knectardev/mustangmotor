@@ -1,0 +1,1522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Super Touring Deluxe One-Piece, 2-Up — Mustang Motorcycle Seats</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700&family=Barlow:wght@300;400;500&family=Barlow+Semi+Condensed:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#efe8de;
+  --bg-warm:#f7f6f3;
+  --surface:#ffffff;
+  --text:#1a1814;
+  --text-2:#5c5750;
+  --text-3:#9b958e;
+  --border:#d8d2c8;
+  --border-light:#e8e3db;
+  --accent:#c8392b;
+  --accent-dark:#a02e22;
+  --gold:#b8933a;
+}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Barlow',sans-serif;
+  font-weight:400;
+  background:var(--bg);
+  color:var(--text);
+  font-size:15px;
+  line-height:1.6;
+}
+
+/* TOPBAR */
+.topbar{
+  background:var(--text);
+  color:#fff;
+  text-align:center;
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:12px;
+  letter-spacing:0.12em;
+  text-transform:uppercase;
+  padding:8px 24px;
+}
+
+/* NAV — 3-zone grid mirroring live site */
+nav{
+  background:var(--surface);
+  border-bottom:1px solid var(--border);
+  position:sticky;
+  top:0;
+  z-index:100;
+}
+.nav-inner{
+  max-width:1200px;
+  margin:0 auto;
+  display:grid;
+  grid-template-columns:1fr auto 1fr;
+  align-items:center;
+  padding:0 40px;
+  height:68px;
+}
+.nav-left,.nav-right{
+  display:flex;
+  align-items:center;
+  gap:26px;
+}
+.nav-right{justify-content:flex-end}
+.nav-center{
+  text-align:center;
+  text-decoration:none;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  padding:0 24px;
+}
+.nav-wordmark{
+  font-family:'Barlow Condensed',sans-serif;
+  font-weight:700;
+  font-size:30px;
+  color:var(--accent);
+  letter-spacing:0.06em;
+  text-transform:uppercase;
+  line-height:1;
+}
+.nav-wordmark-sub{
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:9px;
+  font-weight:600;
+  letter-spacing:0.28em;
+  text-transform:uppercase;
+  color:var(--text);
+  line-height:1;
+  margin-top:3px;
+}
+.nav-link{
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:13px;
+  letter-spacing:0.1em;
+  text-transform:uppercase;
+  font-weight:600;
+  color:var(--text-2);
+  text-decoration:none;
+  transition:color 0.15s;
+  white-space:nowrap;
+}
+.nav-link:hover{color:var(--text)}
+.nav-icons{display:flex;align-items:center;gap:16px}
+.nav-icon-btn{
+  background:none;border:none;cursor:pointer;
+  color:var(--text-2);padding:4px;
+  display:flex;align-items:center;
+}
+.nav-icon-btn:hover{color:var(--text)}
+.cart-btn{display:flex;align-items:flex-start}
+.cart-badge{
+  background:var(--accent);
+  color:#fff;
+  font-size:10px;
+  font-weight:600;
+  font-family:'Barlow Condensed',sans-serif;
+  width:18px;height:18px;
+  border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  margin-left:-8px;margin-top:-10px;
+}
+
+/* BREADCRUMB */
+.breadcrumb-wrap{
+  background:var(--surface);
+  border-bottom:1px solid var(--border-light);
+}
+.breadcrumb{
+  max-width:1200px;
+  margin:0 auto;
+  padding:14px 40px;
+  font-size:12px;
+  color:var(--text-3);
+  font-family:'Barlow Condensed',sans-serif;
+  letter-spacing:0.04em;
+  text-transform:uppercase;
+}
+.breadcrumb a{color:var(--text-3);text-decoration:none}
+.breadcrumb a:hover{color:var(--text)}
+.breadcrumb span{margin:0 8px}
+
+/* PRODUCT LAYOUT */
+.product-page{
+  max-width:1200px;
+  margin:0 auto;
+  padding:40px 40px 80px;
+  display:grid;
+  grid-template-columns:1fr 480px;
+  gap:60px;
+  align-items:start;
+}
+
+/* GALLERY + TOGGLE */
+.gallery{}
+.gallery-tabs{display:flex;gap:0;margin-bottom:0}
+.gallery-tab{
+  flex:1;
+  padding:9px 16px;
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:12px;font-weight:700;
+  letter-spacing:0.1em;text-transform:uppercase;
+  cursor:pointer;
+  background:var(--bg-warm);
+  color:var(--text-3);
+  border:1px solid var(--border);
+  border-bottom:none;
+  text-align:center;
+  transition:all 0.15s;
+}
+.gallery-tab.active{background:var(--surface);color:var(--text);border-bottom:2px solid var(--accent)}
+.gallery-tab:first-child{border-right:none}
+.gallery-main{
+  background:var(--bg-warm);
+  border:1px solid var(--border);
+  border-top:none;
+  aspect-ratio:3/2;
+  display:flex;align-items:center;justify-content:center;
+  overflow:hidden;
+  position:relative;
+  margin-bottom:10px;
+}
+.gallery-main img{
+  width:100%;height:100%;object-fit:cover;
+  display:block;
+  transition:opacity 0.3s;
+}
+.gallery-badge{
+  position:absolute;top:16px;left:16px;
+  background:var(--text);color:#fff;
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:11px;font-weight:600;
+  letter-spacing:0.1em;text-transform:uppercase;
+  padding:5px 10px;z-index:2;
+}
+.gallery-thumbs{
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:8px;
+}
+.thumb{
+  background:var(--bg-warm);
+  border:1.5px solid transparent;
+  aspect-ratio:3/2;
+  overflow:hidden;
+  cursor:pointer;
+  transition:border-color 0.15s;
+}
+.thumb.active{border-color:var(--text)}
+.thumb:hover{border-color:var(--border)}
+#photo-view{display:block}
+#view-3d{
+  display:none;
+  width:100%;
+  aspect-ratio:3/2;
+  border:1px solid var(--border);
+  border-top:none;
+  background:var(--bg-warm);
+  position:relative;
+  margin-bottom:10px;
+}
+#view-3d canvas{display:block;width:100%;height:100%}
+.view-3d-label{
+  position:absolute;bottom:12px;right:12px;
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:10px;font-weight:700;
+  letter-spacing:0.1em;text-transform:uppercase;
+  color:var(--text-3);
+  background:rgba(255,255,255,0.85);
+  padding:4px 8px;z-index:2;
+  pointer-events:none;
+}
+
+/* CONFIGURATOR */
+.configurator{position:sticky;top:88px;align-self:start;max-height:calc(100vh - 96px);overflow-y:auto;padding-right:16px;
+  scrollbar-width:none;-ms-overflow-style:none}
+.configurator::-webkit-scrollbar{display:none}
+.prod-meta{
+  border-bottom:1px solid var(--border-light);
+  padding-bottom:20px;
+  margin-bottom:20px;
+}
+.prod-series{
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:12px;letter-spacing:0.12em;
+  text-transform:uppercase;color:var(--accent);
+  font-weight:600;margin-bottom:6px;
+}
+.prod-title{
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:28px;font-weight:700;
+  line-height:1.15;letter-spacing:0.01em;
+  text-transform:uppercase;color:var(--text);
+  margin-bottom:8px;
+}
+.prod-fitment{
+  font-size:13px;color:var(--text-2);
+  margin-bottom:14px;
+  font-family:'Barlow Semi Condensed',sans-serif;
+}
+.prod-fitment strong{color:var(--text)}
+.rating-row{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.stars{color:var(--gold);font-size:14px;letter-spacing:2px}
+.review-count{font-size:12px;color:var(--text-3)}
+.price-label{
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:10px;font-weight:600;
+  letter-spacing:0.1em;text-transform:uppercase;
+  color:var(--text-3);margin-bottom:2px;
+}
+.price-row{display:flex;align-items:baseline;gap:8px;margin-bottom:6px}
+.price{
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:32px;font-weight:700;color:var(--text);
+}
+.price-currency{
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:14px;font-weight:500;
+  color:var(--text-3);letter-spacing:0.04em;
+}
+.price-note{font-size:12px;color:var(--text-3)}
+.sku-row{
+  font-size:11px;color:var(--text-3);
+  font-family:'Barlow Condensed',sans-serif;
+  letter-spacing:0.05em;text-transform:uppercase;
+}
+.sku-val{color:var(--text-2);font-weight:600}
+
+/* SECTION BLOCKS */
+.cfg-section{border-top:1px solid var(--border-light);padding:18px 0 4px}
+.cfg-section-head{display:flex;align-items:baseline;gap:8px;margin-bottom:12px}
+.cfg-step{
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:10px;font-weight:700;
+  color:var(--border);min-width:16px;
+}
+.cfg-label{
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:11px;font-weight:700;
+  letter-spacing:0.14em;text-transform:uppercase;
+  color:var(--text-2);
+}
+.cfg-val{
+  font-family:'Barlow Semi Condensed',sans-serif;
+  font-size:13px;color:var(--text);font-weight:500;
+}
+.cfg-swatch-preview{
+  width:14px;height:14px;
+  border-radius:50%;
+  border:1px solid var(--border);
+  display:inline-block;
+  vertical-align:middle;
+  margin-left:4px;
+}
+
+/* STYLE CARDS */
+.style-cards{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:4px}
+.style-card{
+  border:1.5px solid var(--border);padding:14px;
+  cursor:pointer;background:var(--surface);
+  transition:all 0.15s;position:relative;
+}
+.style-card.active{border-color:var(--text);background:var(--bg-warm)}
+.style-card:hover:not(.active){border-color:var(--text-3)}
+.style-card-name{
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:14px;font-weight:700;
+  text-transform:uppercase;letter-spacing:0.05em;
+  color:var(--text);margin-bottom:4px;
+}
+.style-card-desc{font-size:11px;color:var(--text-3);line-height:1.4}
+.style-check{
+  position:absolute;top:10px;right:10px;
+  width:16px;height:16px;background:var(--text);
+  display:flex;align-items:center;justify-content:center;
+  opacity:0;transition:opacity 0.15s;
+}
+.style-card.active .style-check{opacity:1}
+.style-check::after{
+  content:'';width:8px;height:5px;
+  border-left:1.5px solid #fff;border-bottom:1.5px solid #fff;
+  transform:rotate(-45deg) translateY(-1px);
+}
+
+/* CHIPS */
+.chips{display:flex;flex-wrap:wrap;gap:6px;padding-bottom:14px}
+.chip{
+  border:1.5px solid var(--border);padding:6px 14px;
+  font-family:'Barlow Semi Condensed',sans-serif;font-size:13px;
+  cursor:pointer;background:var(--surface);color:var(--text);
+  transition:all 0.12s;white-space:nowrap;font-weight:500;
+}
+.chip:hover:not(.active){border-color:var(--text-2);background:var(--bg-warm)}
+.chip.active{background:var(--text);color:#fff;border-color:var(--text)}
+
+/* COLOR SWATCHES */
+.swatch-grid{display:flex;flex-wrap:wrap;gap:8px;padding-bottom:8px}
+.swatch{
+  width:30px;height:30px;border-radius:50%;
+  cursor:pointer;border:2px solid transparent;
+  outline:2px solid transparent;
+  transition:all 0.12s;flex-shrink:0;
+}
+.swatch:hover{transform:scale(1.12)}
+.swatch.active{outline-color:var(--text);outline-offset:2px;transform:scale(1.12)}
+.swatch-name{font-size:12px;color:var(--text-2);margin-bottom:10px;min-height:16px;font-family:'Barlow Semi Condensed',sans-serif}
+
+/* YES/NO FEATURE ROWS */
+.feature-rows{padding-bottom:8px}
+.feature-row{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:10px 0;border-bottom:1px solid var(--border-light);
+}
+.feature-row:last-child{border-bottom:none}
+.feature-name{font-size:13px;font-weight:500;color:var(--text);font-family:'Barlow Semi Condensed',sans-serif}
+.feature-desc{font-size:11px;color:var(--text-3)}
+.yn-group{display:flex;gap:4px}
+.yn{
+  border:1.5px solid var(--border);padding:4px 14px;
+  font-size:12px;font-weight:600;
+  font-family:'Barlow Condensed',sans-serif;
+  letter-spacing:0.06em;text-transform:uppercase;
+  cursor:pointer;background:var(--surface);color:var(--text-3);
+  transition:all 0.12s;
+}
+.yn.active{background:var(--text);color:#fff;border-color:var(--text)}
+
+/* CONDITIONAL PANEL */
+.sub-panel{
+  background:var(--bg-warm);border:1px solid var(--border-light);
+  padding:14px;margin-top:10px;margin-bottom:8px;
+}
+.sub-label{
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:10px;font-weight:700;
+  letter-spacing:0.14em;text-transform:uppercase;
+  color:var(--text-3);margin-bottom:8px;
+}
+.hidden{display:none}
+
+/* PROGRESS BAR */
+.progress-wrap{margin:14px 0 6px}
+.progress-meta{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:5px}
+.progress-label{
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:10px;font-weight:700;
+  letter-spacing:0.1em;text-transform:uppercase;color:var(--text-3);
+}
+.progress-text{font-family:'Barlow Semi Condensed',sans-serif;font-size:11px;color:var(--text-3)}
+.progress-track{width:100%;height:4px;background:var(--border-light);overflow:hidden}
+.progress-fill{height:100%;width:0%;background:var(--accent);transition:width 0.4s ease}
+
+/* ORDER SUMMARY */
+.order-summary{
+  background:var(--bg-warm);border:1px solid var(--border);
+  padding:16px;margin:16px 0;
+}
+.os-head{
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:10px;font-weight:700;
+  letter-spacing:0.14em;text-transform:uppercase;
+  color:var(--text-3);margin-bottom:10px;
+}
+.os-row{
+  display:flex;justify-content:space-between;align-items:baseline;
+  padding:5px 0;border-bottom:1px solid var(--border-light);gap:16px;
+}
+.os-row:last-child{border-bottom:none}
+.os-key{font-size:11px;color:var(--text-3);font-family:'Barlow Semi Condensed',sans-serif;white-space:nowrap}
+.os-val{font-size:12px;color:var(--text);font-weight:500;font-family:'Barlow Semi Condensed',sans-serif;text-align:right}
+
+/* ATC — near-black to match live site */
+.atc-zone{padding:4px 0 0}
+.atc{
+  width:100%;padding:16px 24px;
+  background:var(--text);color:#fff;border:none;
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:15px;font-weight:700;
+  letter-spacing:0.12em;text-transform:uppercase;
+  cursor:pointer;transition:background 0.15s;
+  margin-bottom:8px;
+  display:flex;align-items:center;justify-content:center;gap:10px;
+}
+.atc:hover{background:#2a2620}
+.atc-secondary{
+  width:100%;padding:13px 24px;
+  background:transparent;color:var(--text);
+  border:1.5px solid var(--border);
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:13px;font-weight:700;
+  letter-spacing:0.1em;text-transform:uppercase;
+  cursor:pointer;transition:all 0.15s;
+  margin-bottom:16px;
+}
+.atc-secondary:hover{border-color:var(--text);background:var(--bg-warm)}
+.customize-cta{display:flex;align-items:center;justify-content:center;gap:10px;margin-top:16px;padding:14px 24px;background:var(--accent);color:#fff;text-decoration:none;font-family:'Barlow Condensed',sans-serif;font-size:14px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;transition:background 0.15s;border:none;cursor:pointer}
+.customize-cta:hover{background:var(--accent-dark)}
+.std-options-btn{
+  display:flex;align-items:center;justify-content:center;gap:8px;
+  width:100%;margin-top:8px;padding:12px 24px;
+  background:var(--surface);color:var(--text);
+  border:1.5px solid var(--border);
+  font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:700;
+  letter-spacing:0.1em;text-transform:uppercase;
+  cursor:pointer;transition:all 0.15s;
+}
+.std-options-btn:hover{border-color:var(--text);background:var(--bg-warm)}
+.std-options-btn.open{border-color:var(--text);background:var(--bg-warm)}
+.std-options-btn .chevron{transition:transform 0.2s;font-size:10px}
+.std-options-btn.open .chevron{transform:rotate(180deg)}
+
+/* TRUST BADGES */
+.trust-badges{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:8px;
+  border-top:1px solid var(--border-light);padding-top:16px;
+}
+.badge{display:flex;flex-direction:column;align-items:center;gap:6px;text-align:center;padding:12px 4px}
+.badge-icon{width:28px;height:28px;color:var(--text-2)}
+.badge-label{
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:10px;font-weight:700;
+  letter-spacing:0.1em;text-transform:uppercase;
+  color:var(--text-2);line-height:1.3;
+}
+
+/* NOTES */
+.note{font-size:11px;color:var(--text-3);margin-top:6px;line-height:1.5;font-family:'Barlow Semi Condensed',sans-serif}
+
+/* INFO TABS */
+.info-tabs{margin-top:32px;border-top:2px solid var(--text)}
+.tab-nav{display:flex;border-bottom:1px solid var(--border);gap:0}
+.tab-btn{
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:12px;font-weight:700;
+  letter-spacing:0.12em;text-transform:uppercase;
+  padding:14px 24px;
+  background:none;border:none;cursor:pointer;
+  color:var(--text-3);border-bottom:2px solid transparent;
+  margin-bottom:-1px;transition:all 0.15s;
+}
+.tab-btn.active{color:var(--text);border-bottom-color:var(--accent)}
+.tab-content{padding:28px 0;display:none}
+.tab-content.active{display:block}
+
+/* DESCRIPTION TAB */
+.desc-content{max-width:700px;font-size:14px;color:var(--text-2);line-height:1.7;font-family:'Barlow Semi Condensed',sans-serif}
+.desc-content p{margin-bottom:14px}
+.desc-content strong{color:var(--text)}
+.desc-highlights{
+  display:grid;grid-template-columns:1fr;
+  gap:6px;margin-top:24px;padding-top:20px;
+  border-top:1px solid var(--border-light);
+}
+.desc-hl-item{
+  display:flex;align-items:flex-start;gap:10px;
+  font-size:13px;color:var(--text-2);
+  font-family:'Barlow Semi Condensed',sans-serif;
+  line-height:1.4;padding:8px 0;
+  border-bottom:1px solid var(--border-light);
+}
+.desc-dot{width:4px;height:4px;background:var(--accent);border-radius:50%;flex-shrink:0;margin-top:7px}
+
+/* FITMENT LIST */
+.fitment-list{columns:1;font-family:'Barlow Semi Condensed',sans-serif;font-size:13px;line-height:1.6;color:var(--text-2)}
+.fitment-item{break-inside:avoid;padding:4px 0;border-bottom:1px solid var(--border-light)}
+
+/* SPECS GRID */
+.spec-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:0;border:1px solid var(--border)}
+.spec-cell{padding:14px 18px;border-right:1px solid var(--border);border-bottom:1px solid var(--border)}
+.spec-cell:nth-child(2n){border-right:none}
+.spec-cell-label{font-family:'Barlow Condensed',sans-serif;font-size:10px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-3);margin-bottom:4px}
+.spec-cell-val{font-size:13px;color:var(--text);font-family:'Barlow Semi Condensed',sans-serif;font-weight:500}
+</style>
+</head>
+<body>
+
+<div class="topbar">American Made &nbsp;·&nbsp; Veteran Owned &nbsp;·&nbsp; Free shipping on orders over $150</div>
+
+<nav>
+  <div class="nav-inner">
+    <div class="nav-left">
+      <a class="nav-link" href="#">Seats &#9662;</a>
+      <a class="nav-link" href="#">Accessories &#9662;</a>
+      <a class="nav-link" href="mustang-configurator-workflow.html">Custom Seats</a>
+    </div>
+    <a class="nav-center" href="#">
+      <div class="nav-wordmark">Mustang</div>
+      <div class="nav-wordmark-sub">Motorcycle Seats</div>
+    </a>
+    <div class="nav-right">
+      <a class="nav-link" href="#">About Us</a>
+      <a class="nav-link" href="#">Resources &#9662;</a>
+      <div class="nav-icons">
+        <button class="nav-icon-btn" title="Search">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/></svg>
+        </button>
+        <button class="nav-icon-btn" title="Account">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </button>
+        <button class="nav-icon-btn cart-btn" title="Cart">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+          <div class="cart-badge">0</div>
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<div class="breadcrumb-wrap">
+  <div class="breadcrumb">
+    <a href="#">Home</a><span>›</span>
+    <a href="#">Seats</a><span>›</span>
+    <a href="#">One-Piece, 2-Up</a><span>›</span>
+    Super Touring One-Piece, 2-Up
+  </div>
+</div>
+
+<div class="product-page">
+
+  <!-- LEFT: GALLERY -->
+  <div class="gallery">
+    <div class="gallery-tabs">
+      <button class="gallery-tab active" id="gtab-photos" onclick="toggleGalleryView('photos')">Photos</button>
+      <button class="gallery-tab" id="gtab-3d" onclick="toggleGalleryView('3d')">3D View</button>
+    </div>
+    <div id="photo-view">
+      <div class="gallery-main">
+        <img id="main-img" src="https://www.mustangseats.com/cdn/shop/files/24278_1350x900_RGB_72DPI_a77cdd9f-6d80-4982-879b-c3914b14a99b.jpg" alt="Super Touring Deluxe One-Piece 2-Up" />
+        <div class="gallery-badge">American Made</div>
+      </div>
+      <div class="gallery-thumbs">
+        <div class="thumb active" onclick="setImg(this,'https://www.mustangseats.com/cdn/shop/files/24278_1350x900_RGB_72DPI_a77cdd9f-6d80-4982-879b-c3914b14a99b.jpg')">
+          <img src="https://www.mustangseats.com/cdn/shop/files/24278_1350x900_RGB_72DPI_a77cdd9f-6d80-4982-879b-c3914b14a99b.jpg" alt="" style="width:100%;height:100%;object-fit:cover">
+        </div>
+        <div class="thumb" onclick="setImg(this,'https://www.mustangseats.com/cdn/shop/files/26985_1350x900_RGB_72DPI.jpg')">
+          <img src="https://www.mustangseats.com/cdn/shop/files/26985_1350x900_RGB_72DPI.jpg" alt="" style="width:100%;height:100%;object-fit:cover">
+        </div>
+        <div class="thumb" onclick="setImg(this,'https://www.mustangseats.com/cdn/shop/files/26986_1350x900_RGB_72DPI.jpg')">
+          <img src="https://www.mustangseats.com/cdn/shop/files/26986_1350x900_RGB_72DPI.jpg" alt="" style="width:100%;height:100%;object-fit:cover">
+        </div>
+        <div class="thumb" onclick="setImg(this,'https://www.mustangseats.com/cdn/shop/files/26987_1350x900_RGB_72DPI.jpg')">
+          <img src="https://www.mustangseats.com/cdn/shop/files/26987_1350x900_RGB_72DPI.jpg" alt="" style="width:100%;height:100%;object-fit:cover">
+        </div>
+        <div class="thumb" onclick="setImg(this,'https://www.mustangseats.com/cdn/shop/files/32918_1350x900_RGB_72DPI.jpg')">
+          <img src="https://www.mustangseats.com/cdn/shop/files/32918_1350x900_RGB_72DPI.jpg" alt="" style="width:100%;height:100%;object-fit:cover">
+        </div>
+      </div>
+    </div>
+    <div id="view-3d">
+      <div class="view-3d-label">Drag to rotate · Scroll to zoom</div>
+    </div>
+    <div style="margin-top:16px;padding:14px;background:var(--bg-warm);border:1px solid var(--border-light)">
+      <div style="font-family:'Barlow Condensed',sans-serif;font-size:10px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--text-3);margin-bottom:6px">Verified fitment</div>
+      <div style="font-size:13px;color:var(--text);font-family:'Barlow Semi Condensed',sans-serif;font-weight:500">Harley-Davidson FL Touring</div>
+      <div style="font-size:12px;color:var(--text-2);margin-top:2px">2008–2025 &nbsp;·&nbsp; Road King, Street Glide, Road Glide, Ultra Limited</div>
+      <div style="margin-top:10px">
+        <a href="#" style="font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent);text-decoration:none">Find my fit →</a>
+      </div>
+    </div>
+
+    <!-- INFO TABS (below gallery, left column) -->
+    <div class="info-tabs">
+      <div class="tab-nav">
+        <button class="tab-btn active" onclick="setTab('description',this)">Description</button>
+        <button class="tab-btn" onclick="setTab('fitment',this)">Fitment</button>
+        <button class="tab-btn" onclick="setTab('specs',this)">Specs</button>
+        <button class="tab-btn" onclick="setTab('install',this)">Install</button>
+      </div>
+      <div class="tab-content active" id="tab-description">
+        <div class="desc-content">
+          <p>The front seat sets the rider back 1.75" compared to the stock seat plus it angles the body for long-distance comfort. The rear seat provides support across its full width and keeps the passenger firmly in the comfort zone. Styled after state-of-the-art automotive interior designs, the seat features exquisite stitching detail. Available driver backrest sold separately. The receiver for the optional, removable and fully adjustable driver backrest is built directly into the seat's baseplate.</p>
+          <p><strong>Will Fit the 2024 Road King Special, Road Glide Limited, Ultra Limited, Tri Glide Ultra</strong><br>
+          <strong>*(Does not fit 2023-2024 CVO Models)</strong></p>
+          <p>Note: This seat will not work with Mustang or H-D&reg; frame-mounted backrest kits. Seat will fit with handrail.</p>
+          <p>Installation of the heated seats on 2014 and later FL Touring models require use of Harley adaptor:<br>
+          69200722 Fits '14-'16 Touring and Trike models.<br>
+          69201599 Fits '18-'24 Softail models and '17-later Touring (except '23-later FLHXSE, FLTRXSE, '24-later FLHX, FLTRX, FLTRXSTSE and '25-later FLHXU) and Trike as a mid-bike connector (near the seat).</p>
+        </div>
+        <div class="desc-highlights">
+          <div class="desc-hl-item"><div class="desc-dot"></div>American-made quality construction with hand-selected materials</div>
+          <div class="desc-hl-item"><div class="desc-dot"></div>High-density molded foam for maximum long-haul comfort</div>
+          <div class="desc-hl-item"><div class="desc-dot"></div>Marine-grade vinyl resists UV fading and weather</div>
+          <div class="desc-hl-item"><div class="desc-dot"></div>Driver Backrest receiver option for add-on backrest accessory</div>
+          <div class="desc-hl-item"><div class="desc-dot"></div>Optional factory-wired heat insert for cold-weather riding</div>
+          <div class="desc-hl-item"><div class="desc-dot"></div>15+ stitch patterns and 17 thread colors to choose from</div>
+          <div class="desc-hl-item"><div class="desc-dot"></div>Deluxe style adds center panel with independent pattern/vinyl</div>
+          <div class="desc-hl-item"><div class="desc-dot"></div>Dropped and shaped front edge for heel clearance</div>
+          <div class="desc-hl-item"><div class="desc-dot"></div>Direct bolt-on — no modification required</div>
+          <div class="desc-hl-item"><div class="desc-dot"></div>5-year manufacturer warranty against defects</div>
+        </div>
+      </div>
+      <div class="tab-content" id="tab-fitment">
+        <div class="fitment-list">
+          <div class="fitment-item">2008-2009 Harley-Davidson FLHT Electra Glide Standard</div>
+          <div class="fitment-item">2008-2013 Harley-Davidson FLHRC Road King Classic</div>
+          <div class="fitment-item">2008-2013 Harley-Davidson FLHTC Electra Glide Classic</div>
+          <div class="fitment-item">2008-2013 Harley-Davidson FLHTCU Ultra Classic Electra Glide</div>
+          <div class="fitment-item">2008-2022 Harley-Davidson FLHR Road King</div>
+          <div class="fitment-item">2008-2023 Harley-Davidson FLHX Street Glide</div>
+          <div class="fitment-item">2008-2023 Harley-Davidson FLTRX Road Glide</div>
+          <div class="fitment-item">2008 Harley-Davidson FLHRSE4 CVO Road King</div>
+          <div class="fitment-item">2008 Harley-Davidson FLHTCUSE3 CVO Ultra Classic Electra Glide</div>
+          <div class="fitment-item">2009-2013 Harley-Davidson FLHTCUTG Tri Glide Ultra Classic</div>
+          <div class="fitment-item">2009 Harley-Davidson FLHTCUSE4 CVO Ultra Classic Electra Glide</div>
+          <div class="fitment-item">2009 Harley-Davidson FLTRSE3 CVO Road Glide</div>
+          <div class="fitment-item">2010-2011 Harley-Davidson FLHXXX Street Glide Trike</div>
+          <div class="fitment-item">2010-2013 Harley-Davidson FLHTK Electra Glide Ultra Limited</div>
+          <div class="fitment-item">2010-2013 Harley-Davidson FLTRX Road Glide Custom</div>
+          <div class="fitment-item">2010 Harley-Davidson FLHTCUSE5 CVO Ultra Classic</div>
+          <div class="fitment-item">2010 Harley-Davidson FLHXSE CVO Street Glide</div>
+          <div class="fitment-item">2011-2013 Harley-Davidson FLTRU Road Glide Ultra</div>
+          <div class="fitment-item">2011 Harley-Davidson FLHTCUSE6 CVO Ultra Classic Electra Glide</div>
+          <div class="fitment-item">2011 Harley-Davidson FLHXSE2 CVO Street Glide</div>
+          <div class="fitment-item">2011 Harley-Davidson FLTRUSE CVO Road Glide Ultra</div>
+          <div class="fitment-item">2012 Harley-Davidson FLHTCUSE7 CVO Ultra Classic Electra Glide</div>
+          <div class="fitment-item">2012 Harley-Davidson FLHXSE3 CVO Street Glide</div>
+          <div class="fitment-item">2012 Harley-Davidson FLTRXSE CVO Road Glide Custom</div>
+          <div class="fitment-item">2013 Harley-Davidson FLHRSE5 CVO Road King</div>
+          <div class="fitment-item">2013 Harley-Davidson FLHTCUSE8 CVO Ultra Classic Electra Glide</div>
+          <div class="fitment-item">2013 Harley-Davidson FLTRXSE2 CVO Road Glide Custom</div>
+          <div class="fitment-item">2014-2019 Harley-Davidson FLHTCU Electra Glide Ultra Classic</div>
+          <div class="fitment-item">2014-2020 Harley-Davidson FLHTKSE CVO Limited</div>
+          <div class="fitment-item">2014-2023 Harley-Davidson FLHXS Street Glide Special</div>
+          <div class="fitment-item">2014-2025 Harley-Davidson FLHTCUTG Tri Glide Ultra</div>
+          <div class="fitment-item">2014-2024 Harley-Davidson FLHTK Ultra Limited</div>
+          <div class="fitment-item">2014 Harley-Davidson FLHRSE6 CVO Road King</div>
+          <div class="fitment-item">2015-2016 Harley-Davidson FLHTCUL Electra Glide Ultra Classic Low</div>
+          <div class="fitment-item">2015-2016 Harley-Davidson FLTRUSE CVO Road Glide Ultra</div>
+          <div class="fitment-item">2015-2019 Harley-Davidson FLHTKL Ultra Limited Low</div>
+          <div class="fitment-item">2015-2022 Harley-Davidson FLHXSE CVO Street Glide</div>
+          <div class="fitment-item">2015-2023 Harley-Davidson FLTRXS Road Glide Special</div>
+          <div class="fitment-item">2016-2019 Harley-Davidson FLTRU Road Glide Ultra</div>
+          <div class="fitment-item">2017-2025 Harley-Davidson FLHRXS Road King Special</div>
+          <div class="fitment-item">2018-2022 Harley-Davidson FLTRXSE CVO Road Glide</div>
+          <div class="fitment-item">2019-2022 Harley-Davidson FLHT Electra Glide Standard</div>
+          <div class="fitment-item">2020-2022 Harley-Davidson FLHTCUTGSE CVO Tri Glide</div>
+          <div class="fitment-item">2020-2024 Harley-Davidson FLTRK Road Glide Limited</div>
+          <div class="fitment-item">2021 Harley-Davidson FLHTKSE CVO Ultra Limited</div>
+          <div class="fitment-item">2022-2023 Harley-Davidson FLHXST Street Glide ST</div>
+          <div class="fitment-item">2022-2023 Harley-Davidson FLTRXST Road Glide ST</div>
+          <div class="fitment-item">2022 Harley-Davidson FLTRKSE CVO Road Glide Limited</div>
+          <div class="fitment-item">2023 Harley-Davidson FLTRKSEANV CVO Road Glide Limited</div>
+        </div>
+      </div>
+      <div class="tab-content" id="tab-specs">
+        <div class="spec-grid">
+          <div class="spec-cell"><div class="spec-cell-label">SKU (base)</div><div class="spec-cell-val">79006 / 79538 / 89538</div></div>
+          <div class="spec-cell"><div class="spec-cell-label">Seat type</div><div class="spec-cell-val">One-piece, driver + passenger</div></div>
+          <div class="spec-cell"><div class="spec-cell-label">Fitment</div><div class="spec-cell-val">Harley FL Touring 2008–2025</div></div>
+          <div class="spec-cell"><div class="spec-cell-label">Seat front width</div><div class="spec-cell-val">19"</div></div>
+          <div class="spec-cell"><div class="spec-cell-label">Seat rear width</div><div class="spec-cell-val">14"</div></div>
+          <div class="spec-cell"><div class="spec-cell-label">Seat reach</div><div class="spec-cell-val">Extended</div></div>
+          <div class="spec-cell"><div class="spec-cell-label">Driver position</div><div class="spec-cell-val">Low-profile bucket</div></div>
+          <div class="spec-cell"><div class="spec-cell-label">Passenger position</div><div class="spec-cell-val">Raised, cupped</div></div>
+          <div class="spec-cell"><div class="spec-cell-label">Foam density</div><div class="spec-cell-val">High-density molded</div></div>
+          <div class="spec-cell"><div class="spec-cell-label">Cover material</div><div class="spec-cell-val">Marine-grade vinyl</div></div>
+          <div class="spec-cell"><div class="spec-cell-label">Mounting</div><div class="spec-cell-val">OEM bolt pattern, direct fit</div></div>
+          <div class="spec-cell"><div class="spec-cell-label">Lead time</div><div class="spec-cell-val">3–5 weeks</div></div>
+        </div>
+      </div>
+      <div class="tab-content" id="tab-install">
+        <div style="max-width:600px;font-size:13px;color:var(--text-2);line-height:1.8;font-family:'Barlow Semi Condensed',sans-serif">
+          <p style="margin-bottom:12px">This seat mounts directly to the OEM seat post using the factory hardware. No drilling, cutting, or modification is required.</p>
+          <p>Full mounting instructions are included with every order. Video guides are available on our <a href="#" style="color:var(--accent)">Mounting Instructions</a> page.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- RIGHT: CONFIGURATOR -->
+  <div class="configurator">
+    <div class="prod-meta">
+      <div class="prod-series">Super Touring Series</div>
+      <div class="prod-title">One-Piece, 2-Up Seat</div>
+      <div class="prod-fitment">For <strong>Harley-Davidson FL Touring</strong> · 2008–2025*</div>
+      <div class="rating-row">
+        <div class="stars">★★★★★</div>
+        <div class="review-count">4.9 / 5 &nbsp;·&nbsp; 134 reviews</div>
+      </div>
+      <div class="price-label">Sale price</div>
+      <div class="price-row">
+        <div class="price" id="price-display">$599.00</div>
+        <div class="price-currency">USD</div>
+      </div>
+      <div class="price-note">Base price — final quote confirmed at order</div>
+      <div class="sku-row" style="margin-top:4px">SKU: <span class="sku-val" id="sku-display">—</span></div>
+      <a class="customize-cta" href="mustang-configurator-workflow.html">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4 12.5-12.5z"/></svg>
+        Customize This Seat
+      </a>
+      <div style="font-size:11px;color:var(--text-3);text-align:center;margin-top:6px;font-family:'Barlow Semi Condensed',sans-serif">Full-screen builder with 3D preview &amp; step-by-step options</div>
+    </div>
+
+    <!-- 01 COVER STYLE -->
+    <div class="cfg-section">
+      <div class="cfg-section-head">
+        <span class="cfg-step">01</span>
+        <div class="cfg-label">Cover style</div>
+        <div class="cfg-val" id="sv-style">Deluxe / Center Panel</div>
+      </div>
+      <div class="style-cards">
+        <div class="style-card active" id="card-deluxe" onclick="setStyle('deluxe')">
+          <div class="style-check"></div>
+          <div class="style-card-name">Deluxe / Center Panel</div>
+          <div class="style-card-desc">Structured center panel with contrast trim and optional vinyl inserts</div>
+        </div>
+        <div class="style-card" id="card-smooth" onclick="setStyle('smooth')">
+          <div class="style-check"></div>
+          <div class="style-card-name">Smooth / Vintage</div>
+          <div class="style-card-desc">Clean uninterrupted surface — classic look with vintage stud option</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 02 PATTERN -->
+    <div class="cfg-section">
+      <div class="cfg-section-head">
+        <span class="cfg-step">02</span>
+        <div class="cfg-label">Pattern</div>
+        <div class="cfg-val" id="sv-pattern">Tuck &amp; Roll</div>
+      </div>
+      <div class="chips" id="pattern-chips"></div>
+    </div>
+
+    <!-- 03 THREAD COLOR -->
+    <div class="cfg-section">
+      <div class="cfg-section-head">
+        <span class="cfg-step">03</span>
+        <div class="cfg-label">Thread color</div>
+        <div class="cfg-val" id="sv-color">American Beauty <span class="cfg-swatch-preview" id="color-preview" style="background:#9b2335"></span></div>
+      </div>
+      <div class="swatch-grid" id="color-swatches"></div>
+      <div class="swatch-name" id="swatch-note">Black — standard color</div>
+    </div>
+
+    <!-- 04 STUD TYPE -->
+    <div class="cfg-section">
+      <div class="cfg-section-head">
+        <span class="cfg-step">04</span>
+        <div class="cfg-label">Stud type</div>
+        <div class="cfg-val" id="sv-stud">Chrome</div>
+      </div>
+      <div class="chips">
+        <div class="chip active" onclick="setChip('stud','Chrome',this)">Chrome</div>
+        <div class="chip" onclick="setChip('stud','Black Pearl',this)">Black Pearl</div>
+        <div class="chip" onclick="setChip('stud','None / Vintage',this)">None / Vintage</div>
+      </div>
+    </div>
+
+    <!-- 05 FEATURES -->
+    <div class="cfg-section">
+      <div class="cfg-section-head">
+        <span class="cfg-step">05</span>
+        <div class="cfg-label">Add-ons &amp; features</div>
+      </div>
+      <div class="feature-rows">
+        <div class="feature-row">
+          <div class="feature-info">
+            <div class="feature-name">Heated seat</div>
+            <div class="feature-desc">Factory-wired heat insert (add $149)</div>
+          </div>
+          <div class="yn-group">
+            <div class="yn active" id="heat-yes" onclick="setFeature('heat','Yes')">Yes</div>
+            <div class="yn" id="heat-no" onclick="setFeature('heat','No')">No</div>
+          </div>
+        </div>
+        <div class="feature-row">
+          <div class="feature-info">
+            <div class="feature-name">Driver Backrest receiver</div>
+            <div class="feature-desc">Adds mounting receiver for DBR accessory</div>
+          </div>
+          <div class="yn-group">
+            <div class="yn active" id="dbr-yes" onclick="setFeature('dbr','Yes')">Yes</div>
+            <div class="yn" id="dbr-no" onclick="setFeature('dbr','No')">No</div>
+          </div>
+        </div>
+        <div class="sub-panel hidden" id="dbr-panel">
+          <div class="sub-label">DBR pattern</div>
+          <div class="chips" style="padding-bottom:0">
+            <div class="chip active" onclick="setSubChip('dbrp','Match main pattern',this,'dbr-panel')">Match main pattern</div>
+            <div class="chip" onclick="setSubChip('dbrp','Stock (no match)',this,'dbr-panel')">Stock (no match)</div>
+          </div>
+        </div>
+        <div class="feature-row">
+          <div class="feature-info">
+            <div class="feature-name">Nose pattern</div>
+            <div class="feature-desc">Extends stitching to front nose section</div>
+          </div>
+          <div class="yn-group">
+            <div class="yn active" id="nose-yes" onclick="setFeature('nose','Yes')">Yes</div>
+            <div class="yn" id="nose-no" onclick="setFeature('nose','No')">No</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 06 LOGO -->
+    <div class="cfg-section">
+      <div class="cfg-section-head">
+        <span class="cfg-step">06</span>
+        <div class="cfg-label">Logo style</div>
+        <div class="cfg-val" id="sv-logo">Embossed</div>
+      </div>
+      <div class="chips">
+        <div class="chip active" onclick="setLogo('Embossed',this)"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" style="vertical-align:-2px;margin-right:5px"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M7 9h10M7 13h6"/></svg>Embossed</div>
+        <div class="chip" onclick="setLogo('Tag',this)"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" style="vertical-align:-2px;margin-right:5px"><path d="M20.59 13.41l-7.17 7.17a2 2 0 01-2.83 0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z"/><circle cx="7" cy="7" r="1.5" fill="currentColor" stroke="none"/></svg>Tag</div>
+        <div class="chip" onclick="setLogo('Custom embroidery',this)"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" style="vertical-align:-2px;margin-right:5px"><path d="M12 2L4 7v5c0 5.25 3.4 10.1 8 11.2 4.6-1.1 8-5.95 8-11.2V7l-8-5z"/><path d="M8 12l3 3 5-6" stroke-linecap="round" stroke-linejoin="round"/></svg>Custom embroidery</div>
+      </div>
+      <div class="sub-panel" id="emb-panel">
+        <div class="sub-label">Logo placement</div>
+        <div class="chips" style="padding-bottom:0;flex-wrap:wrap">
+          <div class="chip active" onclick="setLogoPlacement('Driver rise',this)">Driver rise</div>
+          <div class="chip" onclick="setLogoPlacement('Driver backrest',this)">Driver backrest</div>
+          <div class="chip" onclick="setLogoPlacement('Driver seat',this)">Driver seat</div>
+          <div class="chip" onclick="setLogoPlacement('Passenger seat',this)">Passenger seat</div>
+          <div class="chip" onclick="setLogoPlacement('Passenger side',this)">Passenger side</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 07 VINYL -->
+    <div class="cfg-section">
+      <div class="cfg-section-head">
+        <span class="cfg-step">07</span>
+        <div class="cfg-label">Vinyl accent</div>
+        <div class="cfg-val" id="sv-vinyl">None</div>
+      </div>
+      <div class="chips" id="vinyl-chips">
+        <div class="chip active" onclick="setChip('vinyl','None',this)">None</div>
+        <div class="chip" onclick="setChip('vinyl','Rogue — Black',this)">Rogue — Black</div>
+        <div class="chip" onclick="setChip('vinyl','Basket Weave — Black',this)">Basket Weave — Black</div>
+        <div class="chip" onclick="setChip('vinyl','Perforated — Black',this)">Perforated — Black</div>
+        <div class="chip" onclick="setChip('vinyl','Distressed — Brown',this)">Distressed — Brown</div>
+        <div class="chip" onclick="setChip('vinyl','Distressed — Black',this)">Distressed — Black</div>
+        <div class="chip" onclick="setChip('vinyl','Gripper — Black',this)">Gripper — Black</div>
+        <div class="chip" onclick="setChip('vinyl','Carbon Fiber — Black',this)">Carbon Fiber — Black</div>
+      </div>
+      <div class="note">Additional vinyl colors available on request — contact us after ordering.</div>
+    </div>
+
+    <!-- CENTER PANEL (Deluxe only) -->
+    <div class="cfg-section hidden" id="cp-section">
+      <div class="cfg-section-head">
+        <div class="cfg-label">Center panel</div>
+        <div style="font-size:11px;color:var(--text-3);font-family:'Barlow Semi Condensed',sans-serif">Deluxe style only</div>
+      </div>
+      <div style="margin-bottom:14px">
+        <div class="sub-label" style="margin-bottom:6px">Panel vinyl</div>
+        <div class="chips" style="padding-bottom:0">
+          <div class="chip active" onclick="setSubChip('cpVinyl','None',this,'cp-section')">None</div>
+          <div class="chip" onclick="setSubChip('cpVinyl','Road King — Black',this,'cp-section')">Road King — Black</div>
+          <div class="chip" onclick="setSubChip('cpVinyl','Rogue — Black',this,'cp-section')">Rogue — Black</div>
+          <div class="chip" onclick="setSubChip('cpVinyl','Perforated — Black',this,'cp-section')">Perforated — Black</div>
+        </div>
+      </div>
+      <div style="margin-bottom:14px">
+        <div class="sub-label" style="margin-bottom:6px">Panel stitch color</div>
+        <div class="chips" style="padding-bottom:0">
+          <div class="chip active" onclick="setSubChip('cpStitch','Black',this,'cp-section')">Black</div>
+          <div class="chip" onclick="setSubChip('cpStitch','Contrast (match thread)',this,'cp-section')">Contrast (match thread)</div>
+        </div>
+      </div>
+      <div>
+        <div class="sub-label" style="margin-bottom:6px">Panel stitch pattern</div>
+        <div class="chips" style="padding-bottom:0">
+          <div class="chip active" onclick="setSubChip('cpPattern','Tuck &amp; Roll',this,'cp-section')">Tuck &amp; Roll</div>
+          <div class="chip" onclick="setSubChip('cpPattern','Double Diamond',this,'cp-section')">Double Diamond</div>
+          <div class="chip" onclick="setSubChip('cpPattern','Smooth',this,'cp-section')">Smooth</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PROGRESS BAR -->
+    <div class="progress-wrap">
+      <div class="progress-meta">
+        <span class="progress-label">Configuration progress</span>
+        <span class="progress-text" id="progress-text">0 of 7 customized</span>
+      </div>
+      <div class="progress-track"><div class="progress-fill" id="progress-fill"></div></div>
+    </div>
+
+    <!-- ORDER SUMMARY -->
+    <div class="order-summary" id="order-summary-box">
+      <div class="os-head">Your configuration</div>
+    </div>
+
+    <!-- ATC -->
+    <div class="atc-zone">
+      <button class="atc" onclick="alert('Order submitted! Our team will confirm within 1 business day.')">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+        Request Custom Order — $<span id="total-display">599.00</span> USD
+      </button>
+      <a class="atc-secondary" href="mustang-configurator-workflow.html" style="text-align:center;text-decoration:none;display:block">
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="vertical-align:-2px;margin-right:4px"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4 12.5-12.5z"/></svg>
+        Build Your Custom Seat →
+      </a>
+    </div>
+    <!-- TRUST BADGES -->
+    <div class="trust-badges">
+      <div class="badge">
+        <svg class="badge-icon" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        <div class="badge-label">Made in<br>Massachusetts</div>
+      </div>
+      <div class="badge">
+        <svg class="badge-icon" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <div class="badge-label">5-Year<br>Warranty</div>
+      </div>
+      <div class="badge">
+        <svg class="badge-icon" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        <div class="badge-label">3–5 Week<br>Lead Time</div>
+      </div>
+    </div>
+
+    <div class="note" style="margin-top:12px;text-align:center">
+      * Fits Road King, Street Glide, Road Glide, Ultra Limited, and related FL models 2008–2025. <a href="#" style="color:var(--accent)">Confirm fitment →</a>
+    </div>
+  </div>
+
+</div>
+
+<script>
+const state={
+  style:'Deluxe / Center Panel',pattern:'Tuck & Roll',
+  color:{name:'American Beauty',hex:'#9b2335',type:'main'},
+  stud:'Chrome',heat:'Yes',dbr:'Yes',nose:'Yes',
+  dbrp:'Match main pattern',logo:'Embossed',emb:'Driver rise',
+  vinyl:'None',cpVinyl:'None',cpStitch:'Black',cpPattern:'Tuck & Roll'
+};
+
+const touched=new Set();
+const totalSteps=7;
+
+const deluxePatterns=['Tuck & Roll','Dagger','Double Stitch Tuck & Roll','Single Diamond'];
+const smoothPatterns=['Double Diamond','Smooth','Square','Diamond Deluxe'];
+
+const colors=[
+  {name:'Black',hex:'#1c1a18',type:'main'},{name:'White',hex:'#f0ede6',type:'custom'},
+  {name:'Gunmetal',hex:'#4a4e52',type:'main'},{name:'Steel',hex:'#6b7280',type:'custom'},
+  {name:'Toast',hex:'#c4915a',type:'main'},{name:'Goldenrod',hex:'#d4a017',type:'custom'},
+  {name:'Gold',hex:'#c89b3c',type:'custom'},{name:'American Beauty',hex:'#9b2335',type:'main'},
+  {name:'Burgundy',hex:'#6b1c2e',type:'custom'},{name:'Dark Cherry',hex:'#5c1a1a',type:'custom'},
+  {name:'Pink',hex:'#e8829a',type:'custom'},{name:'Mandarin Orange',hex:'#d4602a',type:'main'},
+  {name:'Sky Blue',hex:'#5ba3c9',type:'main'},{name:'Cosmic Purple',hex:'#6b4fa0',type:'custom'},
+  {name:'Electric Green',hex:'#3cb043',type:'custom'},{name:'Forest Green',hex:'#2d6a4f',type:'main'},
+  {name:'Forrest Green',hex:'#2d6a4f',type:'main'}
+];
+
+function markStep(n){
+  touched.add(n);
+  var pct=Math.round(touched.size/totalSteps*100);
+  document.getElementById('progress-fill').style.width=pct+'%';
+  document.getElementById('progress-text').textContent=touched.size+' of '+totalSteps+' customized';
+}
+
+function setImg(el,src){
+  document.getElementById('main-img').src=src;
+  document.querySelectorAll('.thumb').forEach(function(t){t.classList.remove('active')});
+  el.classList.add('active');
+}
+
+function toggleGalleryView(mode){
+  var photoView=document.getElementById('photo-view');
+  var view3d=document.getElementById('view-3d');
+  var tabP=document.getElementById('gtab-photos');
+  var tab3=document.getElementById('gtab-3d');
+  if(mode==='3d'){
+    photoView.style.display='none';
+    view3d.style.display='block';
+    tabP.classList.remove('active');
+    tab3.classList.add('active');
+    if(window.start3D)window.start3D();
+  }else{
+    photoView.style.display='block';
+    view3d.style.display='none';
+    tabP.classList.add('active');
+    tab3.classList.remove('active');
+  }
+}
+
+function getSku(){
+  var isD=state.style.includes('Deluxe');
+  var haD=state.dbr==='Yes';
+  if(isD)return haD?'79006-DBR':'79006';
+  if(state.pattern==='Double Diamond')return haD?'89556':'89538';
+  return haD?'79556':'79538';
+}
+
+function getPrice(){
+  var p=599;
+  if(state.heat==='Yes')p+=149;
+  if(state.dbr==='Yes')p+=49;
+  if(state.color.type==='custom')p+=75;
+  if(state.logo==='Custom embroidery')p+=95;
+  return p;
+}
+
+function fmtPrice(p){
+  return p.toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2});
+}
+
+function setStyle(s){
+  var isD=s==='deluxe';
+  state.style=isD?'Deluxe / Center Panel':'Smooth / Vintage';
+  document.getElementById('card-deluxe').className='style-card'+(isD?' active':'');
+  document.getElementById('card-smooth').className='style-card'+(!isD?' active':'');
+  state.pattern=(isD?deluxePatterns:smoothPatterns)[0];
+  renderPatterns();
+  document.getElementById('cp-section').classList.toggle('hidden',!isD);
+  document.getElementById('sv-style').textContent=state.style;
+  markStep(1);
+  updateAll();
+  if(window.update3DPattern)window.update3DPattern(state.pattern);
+}
+
+function renderPatterns(){
+  var pts=state.style.includes('Deluxe')?deluxePatterns:smoothPatterns;
+  document.getElementById('pattern-chips').innerHTML=pts.map(function(p){
+    return '<div class="chip'+(p===state.pattern?' active':'')+'" onclick="setPattern('+JSON.stringify(p)+',this)">'+p+'</div>';
+  }).join('');
+}
+
+function setPattern(p,el){
+  state.pattern=p;
+  document.querySelectorAll('#pattern-chips .chip').forEach(function(c){c.classList.remove('active')});
+  el.classList.add('active');
+  markStep(2);
+  updateAll();
+  if(window.update3DPattern)window.update3DPattern(p);
+}
+
+function renderColors(){
+  document.getElementById('color-swatches').innerHTML=colors.map(function(c){
+    return '<div class="swatch'+(c.name===state.color.name?' active':'')+'" style="background:'+c.hex+';border-color:'+(c.hex==='#f0ede6'?'#ccc':'transparent')+'" title="'+c.name+'" onclick=\'pickColor('+JSON.stringify(c)+')\'></div>';
+  }).join('');
+}
+
+function pickColor(c){
+  state.color=c;
+  renderColors();
+  document.getElementById('swatch-note').textContent=c.name+' — '+(c.type==='custom'?'custom (upcharge +$75)':'standard color');
+  document.getElementById('sv-color').innerHTML=c.name+' <span class="cfg-swatch-preview" style="background:'+c.hex+'"></span>';
+  markStep(3);
+  updateAll();
+  if(window.update3DColor)window.update3DColor(c.hex);
+}
+
+function setChip(key,val,el){
+  state[key]=val;
+  el.closest('.chips').querySelectorAll('.chip').forEach(function(c){c.classList.remove('active')});
+  el.classList.add('active');
+  document.getElementById('sv-'+key).textContent=val;
+  if(key==='stud')markStep(4);
+  if(key==='vinyl')markStep(7);
+  updateAll();
+}
+
+function setFeature(key,val){
+  state[key]=val;
+  document.getElementById(key+'-yes').className='yn'+(val==='Yes'?' active':'');
+  document.getElementById(key+'-no').className='yn'+(val==='No'?' active':'');
+  if(key==='dbr')document.getElementById('dbr-panel').classList.toggle('hidden',val==='No');
+  markStep(5);
+  updateAll();
+}
+
+function setSubChip(key,val,el,panelId){
+  state[key]=val;
+  el.closest('.chips').querySelectorAll('.chip').forEach(function(c){c.classList.remove('active')});
+  el.classList.add('active');
+  updateAll();
+}
+
+function setLogo(val,el){
+  state.logo=val;
+  document.querySelectorAll('.cfg-section .chips .chip').forEach(function(c){
+    var txt=c.textContent.trim();
+    if(txt===val)c.classList.add('active');
+    else if(['Embossed','Tag','Custom embroidery'].indexOf(txt)!==-1)c.classList.remove('active');
+  });
+  document.getElementById('sv-logo').textContent=val;
+  if(window.update3DLogo)window.update3DLogo(val,state.emb);
+  markStep(6);
+  updateAll();
+}
+
+function setLogoPlacement(val,el){
+  state.emb=val;
+  el.closest('.chips').querySelectorAll('.chip').forEach(function(c){c.classList.remove('active')});
+  el.classList.add('active');
+  if(window.update3DLogo)window.update3DLogo(state.logo,val);
+  updateAll();
+}
+
+function updateAll(){
+  var sku=getSku();
+  var price=getPrice();
+  document.getElementById('sku-display').textContent=sku+(state.color.type==='custom'?' + custom':'');
+  document.getElementById('price-display').textContent='$'+fmtPrice(price);
+  document.getElementById('total-display').textContent=fmtPrice(price);
+  document.getElementById('sv-pattern').textContent=state.pattern;
+  document.getElementById('sv-stud').textContent=state.stud;
+
+  var rows=[
+    ['Cover style',state.style],
+    ['Pattern',state.pattern],
+    ['Thread color',state.color.name+(state.color.type==='custom'?' (custom)':'')],
+    ['Stud type',state.stud],
+    ['Heat',state.heat==='Yes'?'Yes (+$149)':'No'],
+    ['Driver Backrest',state.dbr==='Yes'?'Yes (+$49)':'No'],
+    state.dbr==='Yes'?['DBR pattern',state.dbrp]:null,
+    ['Nose pattern',state.nose],
+    ['Logo',state.logo+' — '+state.emb],
+    state.vinyl!=='None'?['Vinyl accent',state.vinyl]:null,
+    state.style.indexOf('Deluxe')!==-1&&state.cpVinyl!=='None'?['Panel vinyl',state.cpVinyl]:null,
+    state.style.indexOf('Deluxe')!==-1?['Panel stitch',state.cpStitch+' / '+state.cpPattern]:null,
+  ].filter(Boolean);
+
+  document.getElementById('order-summary-box').innerHTML=
+    '<div class="os-head">Your configuration</div>'+
+    rows.map(function(r){return '<div class="os-row"><span class="os-key">'+r[0]+'</span><span class="os-val">'+r[1]+'</span></div>'}).join('')+
+    '<div class="os-row" style="border-top:1px solid var(--border);margin-top:4px;padding-top:8px"><span class="os-key" style="font-weight:600;color:var(--text)">Estimated total</span><span class="os-val" style="font-size:15px;font-weight:700;color:var(--accent)">$'+fmtPrice(price)+' USD</span></div>';
+}
+
+function setTab(id,btn){
+  document.querySelectorAll('.tab-content').forEach(function(t){t.classList.remove('active')});
+  document.querySelectorAll('.tab-btn').forEach(function(b){b.classList.remove('active')});
+  document.getElementById('tab-'+id).classList.add('active');
+  btn.classList.add('active');
+}
+
+renderPatterns();
+renderColors();
+document.getElementById('cp-section').classList.remove('hidden');
+document.getElementById('sv-stud').textContent='Chrome';
+document.getElementById('sv-vinyl').textContent='None';
+updateAll();
+</script>
+
+<!-- Three.js 3D Seat Viewer -->
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://esm.sh/three@0.162.0",
+    "three/addons/": "https://esm.sh/three@0.162.0/examples/jsm/"
+  }
+}
+</script>
+<script type="module">
+import * as THREE from 'three';
+import {OrbitControls} from 'three/addons/controls/OrbitControls.js';
+
+let scene,camera,renderer,controls,seatMesh,stitchLines,logoGroup;
+let initialized=false;
+
+function seatSurface(u,v){
+  // --- width (half-width) along seat length ---
+  let halfW;
+  if(v<0.06)      halfW=0.12+v*22;
+  else if(v<0.14) halfW=1.44+(v-0.06)*22;
+  else if(v<0.28) halfW=3.20+(v-0.14)*8.7;
+  else if(v<0.46) halfW=4.42+(v-0.28)*2.2;
+  else if(v<0.54){const t=(v-0.46)/0.08; halfW=4.82-Math.sin(t*Math.PI)*0.35;}
+  else if(v<0.68) halfW=4.82+(v-0.54)*7;
+  else if(v<0.86) halfW=5.80;
+  else{const t=(v-0.86)/0.14; halfW=5.80*(1-t*t*0.65);}
+
+  const x=(u-0.5)*2*halfW;
+  const z=(v-0.5)*17;
+
+  // --- height along centerline ---
+  let h;
+  if(v<0.05)      h=0.55+v*18;
+  else if(v<0.14) h=1.45+(v-0.05)*4.5;
+  else if(v<0.44){const dt=(v-0.14)/0.30; h=1.86-Math.sin(dt*Math.PI)*0.24;}
+  else if(v<0.56){const t=(v-0.44)/0.12; const e=t*t*(3-2*t); h=1.86+e*0.95;}
+  else if(v<0.78){const pt=(v-0.56)/0.22; h=2.81+Math.sin(pt*Math.PI)*0.12;}
+  else if(v<0.88) h=2.81-(v-0.78)*2.5;
+  else            h=2.56-(v-0.88)*14;
+
+  // --- cross-section: cushion shape (flat top, steep rolloff) ---
+  const xn=(u-0.5)*2, absX=Math.abs(xn);
+  let edge;
+  if(absX<0.62) edge=1.0;
+  else{const t=(absX-0.62)/0.38; edge=Math.cos(t*Math.PI*0.5);}
+  edge=Math.max(0,edge);
+
+  const baseH=0.25;
+  let y=baseH+(h-baseH)*edge;
+
+  // --- driver bucket concavity ---
+  if(v>0.16&&v<0.43){
+    const sv=Math.sin(((v-0.16)/0.27)*Math.PI);
+    y-=sv*(1-absX*absX)*0.14;
+  }
+  // --- slight passenger cup ---
+  if(v>0.58&&v<0.80){
+    const sv=Math.sin(((v-0.58)/0.22)*Math.PI);
+    y-=sv*(1-absX*absX)*0.06;
+  }
+  return{x,y,z};
+}
+
+function buildSeatGeo(res){
+  const verts=[],uvs=[],idx=[];
+  for(let iv=0;iv<=res;iv++)
+    for(let iu=0;iu<=res;iu++){
+      const p=seatSurface(iu/res,iv/res);
+      verts.push(p.x,p.y,p.z);
+      uvs.push(iu/res,iv/res);
+    }
+  for(let iv=0;iv<res;iv++)
+    for(let iu=0;iu<res;iu++){
+      const a=iv*(res+1)+iu,b=a+1,c=a+res+1,d=c+1;
+      idx.push(a,c,b,b,c,d);
+    }
+  const geo=new THREE.BufferGeometry();
+  geo.setAttribute('position',new THREE.Float32BufferAttribute(verts,3));
+  geo.setAttribute('uv',new THREE.Float32BufferAttribute(uvs,2));
+  geo.setIndex(idx);
+  geo.computeVertexNormals();
+  return geo;
+}
+
+function buildStitchPts(pattern,res){
+  const pts=[];
+  const lc=pattern.toLowerCase();
+  if(lc.includes('tuck')||lc.includes('dagger')||lc.includes('stitch')){
+    const n=lc.includes('double')?16:10;
+    for(let i=1;i<n;i++){
+      const u=i/n;
+      for(let j=0;j<res;j++){
+        const v1=j/res,v2=(j+1)/res;
+        const p1=seatSurface(u,v1),p2=seatSurface(u,v2);
+        if(p1.y>0.4&&p2.y>0.4)
+          pts.push(p1.x,p1.y+0.05,p1.z,p2.x,p2.y+0.05,p2.z);
+      }
+    }
+  }else if(lc.includes('diamond')||lc.includes('square')){
+    const sp=lc.includes('double')||lc.includes('deluxe')?0.06:0.09;
+    for(let off=-1.5;off<2.5;off+=sp){
+      for(let j=0;j<res;j++){
+        const v1=j/res,v2=(j+1)/res;
+        const slope=lc.includes('square')?0.5:0.6;
+        const u1=off+v1*slope,u2=off+v2*slope;
+        if(u1>0.05&&u1<0.95&&u2>0.05&&u2<0.95){
+          const p1=seatSurface(u1,v1),p2=seatSurface(u2,v2);
+          if(p1.y>0.4&&p2.y>0.4)
+            pts.push(p1.x,p1.y+0.05,p1.z,p2.x,p2.y+0.05,p2.z);
+        }
+        const u3=off-v1*slope,u4=off-v2*slope;
+        if(u3>0.05&&u3<0.95&&u4>0.05&&u4<0.95){
+          const p3=seatSurface(u3,v1),p4=seatSurface(u4,v2);
+          if(p3.y>0.4&&p4.y>0.4)
+            pts.push(p3.x,p3.y+0.05,p3.z,p4.x,p4.y+0.05,p4.z);
+        }
+      }
+    }
+  }
+  return pts;
+}
+
+function addStitch(pattern,colorHex){
+  if(stitchLines){scene.remove(stitchLines);stitchLines.geometry.dispose();stitchLines.material.dispose();stitchLines=null;}
+  const pts=buildStitchPts(pattern,60);
+  if(!pts.length)return;
+  const geo=new THREE.BufferGeometry();
+  geo.setAttribute('position',new THREE.Float32BufferAttribute(pts,3));
+  stitchLines=new THREE.LineSegments(geo,new THREE.LineBasicMaterial({color:new THREE.Color(colorHex)}));
+  scene.add(stitchLines);
+}
+
+function buildLogo(style,placement){
+  if(logoGroup){scene.remove(logoGroup);logoGroup.traverse(function(c){if(c.geometry)c.geometry.dispose();if(c.material)c.material.dispose()});logoGroup=null;}
+  if(!scene)return;
+  logoGroup=new THREE.Group();
+  const lc=style.toLowerCase();
+  const pl=(placement||'Driver rise').toLowerCase();
+  let cv=0.72, cu=0.50, lift=0.07;
+  if(pl.includes('driver')&&pl.includes('rise')){cv=0.42;cu=0.50;}
+  else if(pl.includes('driver')&&pl.includes('back')){cv=0.52;cu=0.50;}
+  else if(pl.includes('driver')&&pl.includes('seat')){cv=0.30;cu=0.50;}
+  else if(pl.includes('passenger')&&pl.includes('seat')){cv=0.72;cu=0.50;}
+  else if(pl.includes('passenger')&&pl.includes('side')){cv=0.72;cu=0.28;}
+  const mat=new THREE.LineBasicMaterial({color:lc.includes('emboss')?0x333333:lc.includes('tag')?0x888888:0xc89b3c});
+
+  function sp(u,v){const p=seatSurface(u,v);return new THREE.Vector3(p.x,p.y+lift,p.z);}
+
+  if(lc.includes('emboss')){
+    const pts=[],steps=24;
+    const mPts=[
+      [cu-0.12,cv-0.04],[cu-0.12,cv+0.04],[cu-0.08,cv+0.01],[cu-0.04,cv+0.04],
+      [cu,cv+0.01],[cu+0.04,cv+0.04],[cu+0.08,cv+0.01],[cu+0.12,cv+0.04],
+      [cu+0.12,cv-0.04],[cu+0.08,cv-0.01],[cu+0.04,cv-0.04],[cu,cv-0.01],
+      [cu-0.04,cv-0.04],[cu-0.08,cv-0.01],[cu-0.12,cv-0.04]
+    ];
+    for(let i=0;i<mPts.length-1;i++){
+      const a=sp(mPts[i][0],mPts[i][1]),b=sp(mPts[i+1][0],mPts[i+1][1]);
+      pts.push(a.x,a.y,a.z,b.x,b.y,b.z);
+    }
+    const rPts=[];
+    for(let i=0;i<=steps;i++){const t=i/steps;rPts.push(sp(cu-0.15+t*0.30,cv-0.06));}
+    for(let i=0;i<=steps;i++){const t=i/steps;rPts.push(sp(cu+0.15,cv-0.06+t*0.12));}
+    for(let i=0;i<=steps;i++){const t=i/steps;rPts.push(sp(cu+0.15-t*0.30,cv+0.06));}
+    for(let i=0;i<=steps;i++){const t=i/steps;rPts.push(sp(cu-0.15,cv+0.06-t*0.12));}
+    for(let i=0;i<rPts.length-1;i++){
+      pts.push(rPts[i].x,rPts[i].y,rPts[i].z,rPts[i+1].x,rPts[i+1].y,rPts[i+1].z);
+    }
+    const geo=new THREE.BufferGeometry();
+    geo.setAttribute('position',new THREE.Float32BufferAttribute(pts,3));
+    logoGroup.add(new THREE.LineSegments(geo,mat));
+
+  }else if(lc.includes('tag')){
+    const pts=[],steps=20,tw=0.08,th=0.04;
+    const rPts=[];
+    for(let i=0;i<=steps;i++){const t=i/steps;rPts.push(sp(cu-tw+t*2*tw,cv-th));}
+    for(let i=0;i<=steps;i++){const t=i/steps;rPts.push(sp(cu+tw,cv-th+t*2*th));}
+    for(let i=0;i<=steps;i++){const t=i/steps;rPts.push(sp(cu+tw-t*2*tw,cv+th));}
+    for(let i=0;i<=steps;i++){const t=i/steps;rPts.push(sp(cu-tw,cv+th-t*2*th));}
+    for(let i=0;i<rPts.length-1;i++){
+      pts.push(rPts[i].x,rPts[i].y,rPts[i].z,rPts[i+1].x,rPts[i+1].y,rPts[i+1].z);
+    }
+    const mPts=[[cu-0.04,cv-0.02],[cu-0.04,cv+0.02],[cu-0.02,cv],[cu,cv+0.02],[cu+0.02,cv],[cu+0.04,cv+0.02],[cu+0.04,cv-0.02]];
+    for(let i=0;i<mPts.length-1;i++){
+      const a=sp(mPts[i][0],mPts[i][1]),b=sp(mPts[i+1][0],mPts[i+1][1]);
+      pts.push(a.x,a.y,a.z,b.x,b.y,b.z);
+    }
+    const geo=new THREE.BufferGeometry();
+    geo.setAttribute('position',new THREE.Float32BufferAttribute(pts,3));
+    logoGroup.add(new THREE.LineSegments(geo,mat));
+
+  }else{
+    const pts=[],steps=32;
+    const oPts=[];
+    for(let i=0;i<=steps;i++){
+      const a=i/steps*Math.PI*2;
+      oPts.push(sp(cu+Math.cos(a)*0.12,cv+Math.sin(a)*0.06));
+    }
+    for(let i=0;i<oPts.length-1;i++){
+      pts.push(oPts[i].x,oPts[i].y,oPts[i].z,oPts[i+1].x,oPts[i+1].y,oPts[i+1].z);
+    }
+    const iPts=[];
+    for(let i=0;i<=steps;i++){
+      const a=i/steps*Math.PI*2;
+      iPts.push(sp(cu+Math.cos(a)*0.10,cv+Math.sin(a)*0.048));
+    }
+    for(let i=0;i<iPts.length-1;i++){
+      pts.push(iPts[i].x,iPts[i].y,iPts[i].z,iPts[i+1].x,iPts[i+1].y,iPts[i+1].z);
+    }
+    const mPts=[[cu-0.08,cv-0.03],[cu-0.08,cv+0.03],[cu-0.04,cv],[cu,cv+0.03],[cu+0.04,cv],[cu+0.08,cv+0.03],[cu+0.08,cv-0.03]];
+    for(let i=0;i<mPts.length-1;i++){
+      const a=sp(mPts[i][0],mPts[i][1]),b=sp(mPts[i+1][0],mPts[i+1][1]);
+      pts.push(a.x,a.y,a.z,b.x,b.y,b.z);
+    }
+    const geo=new THREE.BufferGeometry();
+    geo.setAttribute('position',new THREE.Float32BufferAttribute(pts,3));
+    logoGroup.add(new THREE.LineSegments(geo,mat));
+  }
+  scene.add(logoGroup);
+}
+
+function init3D(){
+  if(initialized)return;
+  initialized=true;
+  const container=document.getElementById('view-3d');
+  const w=container.clientWidth,h=container.clientHeight;
+
+  scene=new THREE.Scene();
+  scene.background=new THREE.Color(0xffffff);
+
+  camera=new THREE.PerspectiveCamera(36,w/h,0.1,100);
+  camera.position.set(12,10,15);
+
+  renderer=new THREE.WebGLRenderer({antialias:true});
+  renderer.setSize(w,h);
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio,2));
+  renderer.toneMapping=THREE.ACESFilmicToneMapping;
+  renderer.toneMappingExposure=1.1;
+  container.insertBefore(renderer.domElement,container.firstChild);
+
+  controls=new OrbitControls(camera,renderer.domElement);
+  controls.target.set(0,1.2,0);
+  controls.enableDamping=true;
+  controls.dampingFactor=0.06;
+  controls.autoRotate=true;
+  controls.autoRotateSpeed=1.2;
+  controls.minDistance=8;
+  controls.maxDistance=25;
+  controls.maxPolarAngle=Math.PI*0.55;
+  controls.update();
+
+  scene.add(new THREE.AmbientLight(0xffffff,0.55));
+  const key=new THREE.DirectionalLight(0xffffff,1.0);
+  key.position.set(6,14,8);scene.add(key);
+  const fill=new THREE.DirectionalLight(0xffffff,0.35);
+  fill.position.set(-8,6,-4);scene.add(fill);
+  const rim=new THREE.DirectionalLight(0xffffff,0.25);
+  rim.position.set(0,3,-10);scene.add(rim);
+
+  const seatGeo=buildSeatGeo(64);
+  seatMesh=new THREE.Mesh(seatGeo,new THREE.MeshStandardMaterial({
+    color:0x1a1a1a,roughness:0.75,metalness:0.05,side:THREE.DoubleSide
+  }));
+  scene.add(seatMesh);
+
+  const bRes=48,bVerts=[],bIdx=[];
+  for(let iv=0;iv<=bRes;iv++)for(let iu=0;iu<=bRes;iu++){
+    const p=seatSurface(iu/bRes,iv/bRes);
+    bVerts.push(p.x,0,p.z);
+  }
+  for(let iv=0;iv<bRes;iv++)for(let iu=0;iu<bRes;iu++){
+    const a=iv*(bRes+1)+iu,b=a+1,c=a+bRes+1,d=c+1;
+    bIdx.push(a,b,c,b,d,c);
+  }
+  const bGeo=new THREE.BufferGeometry();
+  bGeo.setAttribute('position',new THREE.Float32BufferAttribute(bVerts,3));
+  bGeo.setIndex(bIdx);bGeo.computeVertexNormals();
+  const base=new THREE.Mesh(bGeo,new THREE.MeshStandardMaterial({color:0x111111,roughness:0.9,metalness:0.1,side:THREE.DoubleSide}));
+  scene.add(base);
+
+  addStitch(window._curPattern||'Tuck & Roll',window._curStitchClr||'#9b2335');
+  buildLogo(window._curLogoStyle||'Embossed',window._curLogoPlacement||'Driver rise');
+
+  (function animate(){requestAnimationFrame(animate);controls.update();renderer.render(scene,camera)})();
+
+  window.addEventListener('resize',function(){
+    const w2=container.clientWidth,h2=container.clientHeight;
+    if(!w2||!h2)return;
+    camera.aspect=w2/h2;camera.updateProjectionMatrix();renderer.setSize(w2,h2);
+  });
+}
+
+window._curPattern='Tuck & Roll';
+window._curStitchClr='#9b2335';
+window._curLogoStyle='Embossed';
+window._curLogoPlacement='Driver rise';
+
+window.start3D=function(){init3D()};
+
+window.update3DColor=function(hex){
+  window._curStitchClr=hex;
+  if(!initialized||!stitchLines)return;
+  stitchLines.material.color.set(hex);
+};
+
+window.update3DPattern=function(pattern){
+  window._curPattern=pattern;
+  if(!initialized)return;
+  addStitch(pattern,window._curStitchClr||'#9b2335');
+};
+
+window.update3DLogo=function(style,placement){
+  if(style)window._curLogoStyle=style;
+  if(placement)window._curLogoPlacement=placement;
+  if(!initialized)return;
+  buildLogo(window._curLogoStyle,window._curLogoPlacement);
+};
+</script>
+</body>
+</html>
