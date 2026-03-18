@@ -34,13 +34,29 @@ body{
 .topbar{
   background:var(--text);
   color:#fff;
-  text-align:center;
   font-family:'Barlow Condensed',sans-serif;
   font-size:12px;
   letter-spacing:0.12em;
   text-transform:uppercase;
   padding:8px 24px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
 }
+.topbar-center{flex:1;text-align:center}
+.topbar-back{
+  color:rgba(255,255,255,0.9);
+  text-decoration:none;
+  display:flex;
+  align-items:center;
+  gap:6px;
+  font-weight:600;
+  transition:color 0.15s;
+  flex-shrink:0;
+}
+.topbar-back:hover{color:#fff}
+.topbar-back svg{flex-shrink:0}
 
 /* NAV — 3-zone grid mirroring live site */
 nav{
@@ -498,7 +514,14 @@ nav{
 </head>
 <body>
 
-<div class="topbar">American Made &nbsp;·&nbsp; Veteran Owned &nbsp;·&nbsp; Free shipping on orders over $150</div>
+<div class="topbar">
+  <a href="index.html" class="topbar-back" aria-label="Back to demo">
+    <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+    Demo
+  </a>
+  <span class="topbar-center">American Made &nbsp;·&nbsp; Veteran Owned &nbsp;·&nbsp; Free shipping on orders over $150</span>
+  <span style="width:4rem;flex-shrink:0" aria-hidden="true"></span>
+</div>
 
 <nav>
   <div class="nav-inner">

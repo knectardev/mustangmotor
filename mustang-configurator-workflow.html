@@ -35,13 +35,29 @@ body{font-family:'Barlow',sans-serif;background:var(--bg);color:var(--text);disp
 .topbar{
   background:#111;
   color:#888;
-  text-align:center;
   font-family:'Barlow Condensed',sans-serif;
   font-size:11px;letter-spacing:0.14em;text-transform:uppercase;
   padding:7px 24px;
   flex-shrink:0;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
 }
 .topbar strong{color:var(--text-2)}
+.topbar-center{flex:1;text-align:center}
+.topbar-back{
+  color:var(--text-2);
+  text-decoration:none;
+  display:flex;
+  align-items:center;
+  gap:6px;
+  font-weight:700;
+  transition:color 0.15s;
+  flex-shrink:0;
+}
+.topbar-back:hover{color:var(--text)}
+.topbar-back svg{flex-shrink:0}
 
 /* NAV */
 nav{
@@ -497,7 +513,14 @@ nav{
 </head>
 <body>
 
-<div class="topbar"><strong>American Made · Veteran Owned</strong> &nbsp;·&nbsp; Free shipping on orders over $150</div>
+<div class="topbar">
+  <a href="index.html" class="topbar-back" aria-label="Back to demo">
+    <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+    Demo
+  </a>
+  <span class="topbar-center"><strong>American Made · Veteran Owned</strong> &nbsp;·&nbsp; Free shipping on orders over $150</span>
+  <span style="width:4rem;flex-shrink:0" aria-hidden="true"></span>
+</div>
 
 <nav>
   <a class="nav-logo" href="#">
