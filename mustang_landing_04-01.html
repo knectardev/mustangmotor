@@ -1,0 +1,1758 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mustang Motorcycle Seats — New Seats for Harley-Davidson 2023–2026</title>
+  <link rel="preconnect" href="https://fonts.bunny.net" />
+  <link href="https://fonts.bunny.net/css?family=barlow:400,600,700|barlow-condensed:700,800&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ==========================================================
+       CSS CUSTOM PROPERTIES
+       Prefixed to match Shopify theme token conventions.
+       When real theme :root{} block arrives, find-and-replace
+       these names — no structural changes needed.
+    ========================================================== */
+    :root {
+      /* Colors — sourced from settings_data.json & design spec */
+      --color-background: #f2ece3;          /* warm off-white, page bg */
+      --color-background-dark: #221e1e;     /* footer / dark sections */
+      --color-background-dark-alt: #292828; /* alternate dark bg */
+      --color-background-header: #ffffff;   /* header bg */
+      --color-foreground: #1a1a1a;          /* primary text */
+      --color-foreground-muted: #737373;    /* subdued text */
+      --color-foreground-light: #f2ece3;    /* text on dark bg */
+      --color-accent: #c83b27;              /* Mustang red */
+      --color-accent-hover: #ad3322;        /* Mustang red hover */
+      --color-accent-bg: #c83b27;           /* red bg for crosssell image block */
+      --color-border: #d9d0c7;              /* card/grid borders */
+      --color-header-text: #000000;         /* header nav text */
+
+      /* Typography */
+      --font-heading-family: 'Barlow Condensed', 'Arial Narrow', Arial, sans-serif;
+      --font-body-family: 'Barlow', Arial, sans-serif;
+      --font-size-xs: 12px;
+      --font-size-sm: 14px;
+      --font-size-base: 16px;
+      --font-size-lg: 20px;
+      --font-size-xl: 28px;
+      --font-size-2xl: 36px;
+      --font-size-3xl: 48px;
+      --font-weight-normal: 400;
+      --font-weight-semibold: 600;
+      --font-weight-bold: 700;
+      --font-weight-extrabold: 800;
+
+      /* Spacing */
+      --spacing-xs: 8px;
+      --spacing-sm: 16px;
+      --spacing-md: 24px;
+      --spacing-lg: 40px;
+      --spacing-xl: 64px;
+      --spacing-2xl: 96px;
+
+      /* Layout — matches Shopify settings_data.json page_width: 1300 */
+      --page-width: 1300px;
+      --container-gutter: 24px;
+      --radius-sm: 2px;
+      --radius-md: 4px;
+    }
+
+    /* ==========================================================
+       RESET & BASE
+    ========================================================== */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--font-body-family);
+      font-size: var(--font-size-base);
+      color: var(--color-foreground);
+      background-color: var(--color-background);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    button {
+      cursor: pointer;
+      font-family: inherit;
+      border: none;
+      background: none;
+    }
+
+    .visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
+    }
+
+    .page-container {
+      width: 100%;
+      max-width: var(--page-width);
+      margin: 0 auto;
+      padding: 0 var(--spacing-sm);
+    }
+
+    /* ==========================================================
+       ANNOUNCEMENT BAR
+    ========================================================== */
+
+    /* SHOPIFY MIGRATION NOTE: announcement-bar.liquid section */
+    .announcement-bar {
+      background-color: var(--color-foreground);
+      color: var(--color-foreground-light);
+      text-align: center;
+      padding: 8px var(--spacing-sm);
+      font-family: var(--font-body-family);
+      font-size: var(--font-size-xs);
+      font-weight: var(--font-weight-bold);
+      letter-spacing: 0.06em;
+      line-height: 1.4;
+    }
+
+    /* ==========================================================
+       HEADER
+    ========================================================== */
+
+    /* SHOPIFY MIGRATION NOTE: Rendered by header.liquid with predictive search drawer and cart drawer sections */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background-color: var(--color-background-header);
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .header__inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 60px;
+      max-width: var(--page-width);
+      margin: 0 auto;
+      padding: 0 var(--container-gutter);
+    }
+
+    /* Logo */
+    .header__logo {
+      display: flex;
+      align-items: center;
+      flex-shrink: 0;
+      text-decoration: none;
+    }
+
+    .header__logo-text {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      line-height: 1;
+    }
+
+    .header__logo-wordmark {
+      font-family: var(--font-heading-family);
+      font-size: 28px;
+      font-weight: var(--font-weight-extrabold);
+      letter-spacing: 0.04em;
+      color: var(--color-accent);
+      text-transform: uppercase;
+      line-height: 1;
+    }
+
+    .header__logo-subtitle {
+      font-family: var(--font-body-family);
+      font-size: 9px;
+      font-weight: var(--font-weight-bold);
+      letter-spacing: 0.32em;
+      color: var(--color-header-text);
+      text-transform: uppercase;
+      margin-top: 1px;
+    }
+
+    /* Hamburger (mobile only) */
+    .header__hamburger {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 5px;
+      width: 36px;
+      height: 36px;
+      padding: 6px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      flex-shrink: 0;
+    }
+
+    .header__hamburger span {
+      display: block;
+      width: 100%;
+      height: 2px;
+      background-color: var(--color-header-text);
+      border-radius: 1px;
+      transition: transform 0.28s ease, opacity 0.28s ease;
+      transform-origin: center;
+    }
+
+    .header__hamburger[aria-expanded="true"] span:nth-child(1) {
+      transform: translateY(7px) rotate(45deg);
+    }
+    .header__hamburger[aria-expanded="true"] span:nth-child(2) {
+      opacity: 0;
+    }
+    .header__hamburger[aria-expanded="true"] span:nth-child(3) {
+      transform: translateY(-7px) rotate(-45deg);
+    }
+
+    /* Desktop nav — hidden on mobile */
+    .header__nav {
+      display: none;
+    }
+
+    /* Icons */
+    .header__icons {
+      display: flex;
+      align-items: center;
+      gap: var(--spacing-xs);
+    }
+
+    .header__icon-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      color: var(--color-header-text);
+      transition: color 0.2s, opacity 0.2s;
+      background: none;
+      border: none;
+    }
+
+    .header__icon-btn:hover {
+      color: var(--color-accent);
+    }
+
+    .header__icon-btn svg {
+      width: 20px;
+      height: 20px;
+      stroke: currentColor;
+      fill: none;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    /* ---- Mobile nav drawer ---- */
+    .mobile-nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #ffffff;
+      z-index: 200;
+      padding: var(--spacing-xl) var(--spacing-sm) var(--spacing-sm);
+      overflow-y: auto;
+      flex-direction: column;
+      display: none;
+      opacity: 0;
+      transform: translateX(-100%);
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    .mobile-nav.is-open {
+      display: flex;
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    .mobile-nav__close {
+      position: absolute;
+      top: var(--spacing-sm);
+      right: var(--spacing-sm);
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 28px;
+      line-height: 1;
+      color: var(--color-header-text);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      transition: color 0.2s;
+    }
+
+    .mobile-nav__close:hover {
+      color: var(--color-accent);
+    }
+
+    .mobile-nav__title {
+      font-family: var(--font-heading-family);
+      font-size: var(--font-size-xs);
+      font-weight: var(--font-weight-bold);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--color-foreground-muted);
+      margin-bottom: var(--spacing-sm);
+    }
+
+    .mobile-nav__list li {
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .mobile-nav__list li:first-child {
+      border-top: 1px solid var(--color-border);
+    }
+
+    .mobile-nav__list a {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 0;
+      font-family: var(--font-heading-family);
+      font-weight: var(--font-weight-bold);
+      font-size: var(--font-size-lg);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--color-header-text);
+      transition: color 0.2s;
+    }
+
+    .mobile-nav__list a:hover {
+      color: var(--color-accent);
+    }
+
+    .mobile-nav__list a svg {
+      width: 12px;
+      height: 12px;
+      stroke: currentColor;
+      fill: none;
+      stroke-width: 2;
+      flex-shrink: 0;
+    }
+
+    /* ---- Desktop header overrides ---- */
+    @media (min-width: 1150px) {
+      .header__inner {
+        height: 72px;
+        padding: 0 var(--container-gutter);
+      }
+
+      .header__hamburger {
+        display: none;
+      }
+
+      .header__nav {
+        display: flex;
+        align-items: center;
+        flex: 1;
+      }
+
+      .header__nav--left {
+        justify-content: flex-start;
+      }
+
+      .header__nav--right {
+        justify-content: flex-end;
+      }
+
+      .header__logo {
+        margin: 0 var(--spacing-lg);
+        flex-shrink: 0;
+      }
+
+      .nav-list {
+        display: flex;
+        align-items: center;
+      }
+
+      .nav-item {
+        position: relative;
+      }
+
+      .nav-item__trigger {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        padding: 0 var(--spacing-sm);
+        height: 72px;
+        font-family: var(--font-heading-family);
+        font-size: var(--font-size-sm);
+        font-weight: var(--font-weight-bold);
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--color-header-text);
+        transition: color 0.2s;
+        background: none;
+        border: none;
+        cursor: pointer;
+        white-space: nowrap;
+      }
+
+      .nav-item__trigger:hover,
+      .nav-item.is-open .nav-item__trigger {
+        color: var(--color-accent);
+      }
+
+      .nav-item__chevron {
+        width: 10px;
+        height: 10px;
+        stroke: currentColor;
+        fill: none;
+        stroke-width: 2;
+        transition: transform 0.22s ease;
+        flex-shrink: 0;
+      }
+
+      .nav-item.is-open .nav-item__chevron {
+        transform: rotate(180deg);
+      }
+
+      /* Dropdown */
+      .nav-dropdown {
+        display: none;
+        position: absolute;
+        top: calc(100% + 1px);
+        left: 0;
+        min-width: 190px;
+        background: #ffffff;
+        border: 1px solid var(--color-border);
+        border-top: 3px solid var(--color-accent);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+        z-index: 50;
+      }
+
+      .nav-item.is-open .nav-dropdown {
+        display: block;
+      }
+
+      .nav-dropdown a {
+        display: block;
+        padding: 12px var(--spacing-md);
+        font-size: var(--font-size-sm);
+        font-family: var(--font-body-family);
+        color: var(--color-foreground);
+        letter-spacing: 0.04em;
+        transition: background 0.15s, color 0.15s;
+        border-bottom: 1px solid var(--color-border);
+      }
+
+      .nav-dropdown a:last-child {
+        border-bottom: none;
+      }
+
+      .nav-dropdown a:hover {
+        background: var(--color-background);
+        color: var(--color-accent);
+      }
+    }
+
+    /* ==========================================================
+       HERO
+    ========================================================== */
+
+    /* SHOPIFY MIGRATION NOTE: Hero Video section — swap <img> for Shopify video/image block */
+    .hero {
+      width: 100%;
+      overflow: hidden;
+      background-color: #e8e0d8;
+      display: block;
+      line-height: 0;
+      max-width: var(--page-width);
+      margin: 0 auto;
+    }
+
+    .hero__image {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 16 / 7;
+      object-fit: cover;
+      display: block;
+    }
+
+    @media (min-width: 1150px) {
+      .hero__image {
+        max-height: 480px;
+        aspect-ratio: unset;
+      }
+    }
+
+    /* ==========================================================
+       INTRO
+    ========================================================== */
+
+    /* SHOPIFY MIGRATION NOTE: Rich text section */
+    .intro {
+      background-color: var(--color-background);
+      padding: var(--spacing-xl) var(--container-gutter);
+      text-align: center;
+      max-width: var(--page-width);
+      margin: 0 auto;
+    }
+
+    .intro__inner {
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    .intro__eyebrow {
+      font-family: var(--font-heading-family);
+      font-size: var(--font-size-sm);
+      font-weight: var(--font-weight-bold);
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--color-accent);
+      margin-bottom: var(--spacing-sm);
+    }
+
+    .intro__title {
+      font-family: var(--font-heading-family);
+      font-size: var(--font-size-2xl);
+      font-weight: var(--font-weight-extrabold);
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      color: var(--color-foreground);
+      margin-bottom: var(--spacing-md);
+      line-height: 1.1;
+    }
+
+    .intro__subtitle {
+      font-size: var(--font-size-lg);
+      color: var(--color-foreground);
+      font-weight: var(--font-weight-semibold);
+      margin-bottom: var(--spacing-sm);
+      line-height: 1.5;
+    }
+
+    .intro__compat {
+      font-size: 18px;
+      color: var(--color-foreground-muted);
+      font-style: italic;
+      line-height: 1.6;
+    }
+
+    @media (min-width: 1150px) {
+      .intro {
+        padding: var(--spacing-2xl) var(--container-gutter);
+      }
+
+      .intro__title {
+        font-size: var(--font-size-3xl);
+      }
+
+      .intro__subtitle {
+        font-size: var(--font-size-xl);
+      }
+    }
+
+    /* ==========================================================
+       PRODUCT GRID
+    ========================================================== */
+
+    /* SHOPIFY MIGRATION NOTE: Media grid / collection list section with metafield for SKU */
+    .product-grid {
+      background-color: var(--color-background);
+      padding: 0 var(--container-gutter) var(--spacing-xl);
+      max-width: var(--page-width);
+      margin: 0 auto;
+    }
+
+    .product-grid__section-title {
+      font-family: var(--font-heading-family);
+      font-size: var(--font-size-xs);
+      font-weight: var(--font-weight-bold);
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--color-foreground-muted);
+      padding: 0 0 var(--spacing-sm);
+    }
+
+    .product-grid__grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--spacing-md);
+    }
+
+    /* Individual card */
+    .product-grid__item {
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 0 0 1px var(--color-border);
+      transition: box-shadow 0.25s ease, transform 0.25s ease;
+      background-color: #ffffff;
+      cursor: pointer;
+      overflow: hidden;
+    }
+
+    .product-grid__item:hover {
+      box-shadow: 0 0 0 1px var(--color-border), 0 8px 28px rgba(0, 0, 0, 0.10);
+      transform: translateY(-2px);
+      z-index: 2;
+      position: relative;
+    }
+
+    .product-grid__image-wrap {
+      background-color: #ffffff;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+
+    .product-grid__image-wrap img {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: contain;
+      transition: transform 0.4s ease;
+      display: block;
+      background-color: #ffffff;
+    }
+
+    .product-grid__item:hover .product-grid__image-wrap img {
+      transform: scale(1.04);
+    }
+
+    .product-grid__info {
+      padding: var(--spacing-sm) var(--spacing-md);
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 -1px 0 0 var(--color-border);
+      background-color: var(--color-background);
+    }
+
+    .product-grid__label {
+      font-family: var(--font-body-family);
+      font-size: var(--font-size-sm);
+      font-weight: var(--font-weight-normal);
+      color: var(--color-foreground);
+      margin-bottom: 2px;
+      line-height: 1.4;
+    }
+
+    .product-grid__name {
+      font-family: var(--font-heading-family);
+      font-size: var(--font-size-xl);
+      font-weight: var(--font-weight-bold);
+      text-transform: none;
+      letter-spacing: -0.01em;
+      color: var(--color-foreground);
+      margin-bottom: 6px;
+      line-height: 1.15;
+    }
+
+    .product-grid__sku {
+      font-size: var(--font-size-xs);
+      color: var(--color-foreground-muted);
+      margin-top: auto;
+    }
+
+    /* Featured card — full-width below the 2×2 */
+    .product-grid__item--featured {
+      grid-column: 1 / -1;
+      flex-direction: column;
+    }
+
+    .product-grid__item--featured .product-grid__image-wrap img {
+      width: 100%;
+      aspect-ratio: 16 / 5;
+      object-fit: cover;
+      object-position: center;
+      background-color: #ffffff;
+    }
+
+    .product-grid__item--featured .product-grid__info {
+      padding: var(--spacing-md) var(--spacing-md);
+    }
+
+    .product-grid__item--featured .product-grid__label {
+      font-size: var(--font-size-base);
+    }
+
+    .product-grid__item--featured .product-grid__name {
+      font-size: var(--font-size-xl);
+    }
+
+    .product-grid__item--featured .product-grid__sku {
+      font-size: var(--font-size-sm);
+    }
+
+    .product-grid__featured-badge {
+      display: inline-block;
+      background-color: var(--color-accent);
+      color: var(--color-foreground-light);
+      font-family: var(--font-heading-family);
+      font-size: var(--font-size-xs);
+      font-weight: var(--font-weight-bold);
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      margin-bottom: var(--spacing-sm);
+    }
+
+    @media (min-width: 1150px) {
+      .product-grid__grid {
+        gap: var(--spacing-lg);
+      }
+
+      /* Featured card becomes side-by-side */
+      .product-grid__item--featured {
+        flex-direction: row;
+      }
+
+      .product-grid__item--featured .product-grid__image-wrap {
+        width: 60%;
+        flex-shrink: 0;
+      }
+
+      .product-grid__item--featured .product-grid__image-wrap img {
+        width: 100%;
+        height: 100%;
+        aspect-ratio: unset;
+        object-fit: cover;
+        object-position: center;
+        background-color: #ffffff;
+      }
+
+      .product-grid__item--featured .product-grid__info {
+        padding: var(--spacing-xl) var(--spacing-xl);
+        justify-content: center;
+        box-shadow: -1px 0 0 0 var(--color-border);
+      }
+
+      .product-grid__item--featured .product-grid__name {
+        font-size: var(--font-size-2xl);
+        margin-bottom: var(--spacing-sm);
+      }
+
+      .product-grid__item--featured .product-grid__label {
+        font-size: var(--font-size-lg);
+        margin-bottom: var(--spacing-xs);
+      }
+
+      .product-grid__item--featured .product-grid__sku {
+        font-size: var(--font-size-base);
+        margin-top: var(--spacing-md);
+      }
+
+      .product-grid__item--featured .product-grid__featured-badge {
+        margin-bottom: var(--spacing-md);
+      }
+    }
+
+    /* ==========================================================
+       CROSSSELL
+    ========================================================== */
+
+    /* SHOPIFY MIGRATION NOTE: Image with text overlay section */
+    .crosssell-wrapper {
+      background-color: var(--color-background-dark);
+    }
+
+    .crosssell {
+      background-color: var(--color-background-dark);
+      display: flex;
+      flex-direction: column;
+      max-width: var(--page-width);
+      margin: 0 auto;
+    }
+
+    .crosssell__image-wrap {
+      background-color: var(--color-background-dark);
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: var(--spacing-md);
+      line-height: 0;
+    }
+
+    .crosssell__image-wrap img {
+      width: 100%;
+      max-width: 414px;
+      height: auto;
+      object-fit: contain;
+      display: block;
+    }
+
+    .crosssell__content {
+      padding: var(--spacing-xl) var(--spacing-sm);
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .crosssell__eyebrow {
+      font-family: var(--font-heading-family);
+      font-size: var(--font-size-xs);
+      font-weight: var(--font-weight-bold);
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--color-accent);
+      margin-bottom: var(--spacing-sm);
+    }
+
+    .crosssell__title {
+      font-family: var(--font-heading-family);
+      font-size: var(--font-size-2xl);
+      font-weight: var(--font-weight-extrabold);
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      color: var(--color-foreground-light);
+      margin-bottom: var(--spacing-md);
+      line-height: 1.1;
+    }
+
+    .crosssell__body {
+      font-size: var(--font-size-base);
+      color: rgba(242, 236, 227, 0.78);
+      margin-bottom: var(--spacing-lg);
+      line-height: 1.75;
+      max-width: 480px;
+    }
+
+    .crosssell__cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 36px;
+      font-family: var(--font-heading-family);
+      font-size: var(--font-size-sm);
+      font-weight: var(--font-weight-bold);
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--color-foreground-light);
+      border: 2px solid var(--color-foreground-light);
+      transition: background-color 0.25s ease, color 0.25s ease;
+      background: transparent;
+      width: 100%;
+    }
+
+    .crosssell__cta:hover {
+      background-color: var(--color-foreground-light);
+      color: var(--color-background-dark);
+    }
+
+    @media (min-width: 1150px) {
+      .crosssell {
+        flex-direction: row;
+        min-height: 420px;
+      }
+
+      .crosssell__image-wrap {
+        width: 45%;
+        flex-shrink: 0;
+        padding: var(--spacing-xl);
+      }
+
+      .crosssell__image-wrap img {
+        width: 100%;
+        max-width: 603px;
+        height: auto;
+        object-fit: contain;
+      }
+
+      .crosssell__content {
+        padding: var(--spacing-xl) var(--spacing-2xl);
+        flex: 1;
+        justify-content: center;
+      }
+
+      .crosssell__title {
+        font-size: var(--font-size-3xl);
+      }
+
+      .crosssell__cta {
+        width: auto;
+      }
+    }
+
+    /* ==========================================================
+       FOOTER
+    ========================================================== */
+
+    /* SHOPIFY MIGRATION NOTE: footer.liquid group section */
+    .site-footer {
+      background-color: var(--color-background-dark);
+      color: var(--color-foreground-light);
+    }
+
+    .footer__main {
+      padding: var(--spacing-xl) var(--container-gutter) var(--spacing-lg);
+      max-width: var(--page-width);
+      margin: 0 auto;
+    }
+
+    .footer__grid {
+      display: flex;
+      flex-direction: column;
+      gap: var(--spacing-lg);
+    }
+
+    /* ---- Brand column ---- */
+    .footer__col-brand {}
+
+    .footer__logo-wrap {
+      margin-bottom: var(--spacing-md);
+    }
+
+    .footer__logo-img {
+      height: 32px;
+      width: auto;
+      filter: brightness(0) invert(1);
+    }
+
+    .footer__newsletter-label {
+      font-family: var(--font-heading-family);
+      font-size: var(--font-size-sm);
+      font-weight: var(--font-weight-bold);
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--color-foreground-light);
+      margin-bottom: var(--spacing-sm);
+    }
+
+    .footer__newsletter-form {
+      display: flex;
+      border: 1px solid rgba(242, 236, 227, 0.28);
+      background: rgba(242, 236, 227, 0.06);
+    }
+
+    .footer__newsletter-input {
+      flex: 1;
+      min-width: 0;
+      background: transparent;
+      border: none;
+      padding: 12px var(--spacing-sm);
+      color: var(--color-foreground-light);
+      font-family: var(--font-body-family);
+      font-size: var(--font-size-sm);
+      outline: none;
+    }
+
+    .footer__newsletter-input::placeholder {
+      color: rgba(242, 236, 227, 0.42);
+    }
+
+    .footer__newsletter-input:focus {
+      outline: 2px solid var(--color-accent);
+      outline-offset: -2px;
+    }
+
+    .footer__newsletter-submit {
+      background: transparent;
+      border: none;
+      border-left: 1px solid rgba(242, 236, 227, 0.28);
+      color: var(--color-foreground-light);
+      padding: 12px var(--spacing-sm);
+      cursor: pointer;
+      transition: background-color 0.2s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .footer__newsletter-submit:hover {
+      background-color: rgba(242, 236, 227, 0.1);
+    }
+
+    .footer__newsletter-submit svg {
+      width: 18px;
+      height: 18px;
+      stroke: currentColor;
+      fill: none;
+      stroke-width: 2;
+    }
+
+    /* ---- Link columns ---- */
+    .footer__col {}
+
+    .footer__col-header {
+      font-family: var(--font-heading-family);
+      font-size: var(--font-size-sm);
+      font-weight: var(--font-weight-bold);
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--color-foreground-light);
+      padding: var(--spacing-sm) 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+      border-bottom: 1px solid rgba(242, 236, 227, 0.15);
+      user-select: none;
+    }
+
+    .footer__col-header svg {
+      width: 16px;
+      height: 16px;
+      stroke: currentColor;
+      fill: none;
+      stroke-width: 2;
+      transition: transform 0.28s ease;
+      flex-shrink: 0;
+    }
+
+    .footer__col.is-open .footer__col-header svg {
+      transform: rotate(180deg);
+    }
+
+    .footer__col-list {
+      display: none;
+      flex-direction: column;
+      gap: 10px;
+      padding: var(--spacing-sm) 0;
+    }
+
+    .footer__col.is-open .footer__col-list {
+      display: flex;
+    }
+
+    .footer__col-list a {
+      font-size: var(--font-size-sm);
+      color: rgba(242, 236, 227, 0.65);
+      transition: color 0.2s;
+      line-height: 1.5;
+    }
+
+    .footer__col-list a:hover {
+      color: var(--color-foreground-light);
+    }
+
+    /* ---- Contact column ---- */
+    .footer__col-contact {
+      display: flex;
+      flex-direction: column;
+      gap: var(--spacing-sm);
+    }
+
+    .footer__btn {
+      display: block;
+      padding: 13px var(--spacing-md);
+      font-family: var(--font-heading-family);
+      font-size: var(--font-size-sm);
+      font-weight: var(--font-weight-bold);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      text-align: center;
+      transition: background-color 0.22s, border-color 0.22s, color 0.22s;
+    }
+
+    .footer__btn--primary {
+      background-color: var(--color-accent);
+      color: var(--color-foreground-light);
+      border: 2px solid var(--color-accent);
+    }
+
+    .footer__btn--primary:hover {
+      background-color: var(--color-accent-hover);
+      border-color: var(--color-accent-hover);
+    }
+
+    .footer__btn--outline {
+      background: transparent;
+      color: var(--color-foreground-light);
+      border: 2px solid rgba(242, 236, 227, 0.38);
+    }
+
+    .footer__btn--outline:hover {
+      border-color: var(--color-foreground-light);
+      background-color: rgba(242, 236, 227, 0.08);
+    }
+
+    /* ---- Footer bottom bar ---- */
+    .footer__bottom {
+      border-top: 1px solid rgba(242, 236, 227, 0.12);
+      padding: var(--spacing-md) var(--container-gutter);
+      display: flex;
+      flex-direction: column;
+      gap: var(--spacing-sm);
+      max-width: var(--page-width);
+      margin: 0 auto;
+    }
+
+    .footer__legal {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px 14px;
+      font-size: var(--font-size-xs);
+      color: rgba(242, 236, 227, 0.45);
+      line-height: 1.6;
+    }
+
+    .footer__legal a {
+      color: rgba(242, 236, 227, 0.45);
+      transition: color 0.2s;
+    }
+
+    .footer__legal a:hover {
+      color: var(--color-foreground-light);
+    }
+
+    .footer__legal span {
+      white-space: nowrap;
+    }
+
+    .footer__social {
+      display: flex;
+      gap: var(--spacing-sm);
+      align-items: center;
+    }
+
+    .footer__social-link {
+      color: rgba(242, 236, 227, 0.55);
+      transition: color 0.2s;
+      display: flex;
+      align-items: center;
+    }
+
+    .footer__social-link:hover {
+      color: var(--color-foreground-light);
+    }
+
+    .footer__social-link svg {
+      width: 20px;
+      height: 20px;
+      fill: currentColor;
+    }
+
+    /* ---- Desktop footer overrides ---- */
+    @media (min-width: 1150px) {
+      .footer__main {
+        padding: var(--spacing-xl) var(--container-gutter) var(--spacing-lg);
+      }
+
+      .footer__grid {
+        flex-direction: row;
+        gap: var(--spacing-xl);
+        align-items: flex-start;
+      }
+
+      .footer__col-brand {
+        flex: 2.2;
+        min-width: 220px;
+      }
+
+      .footer__col {
+        flex: 1.3;
+        min-width: 130px;
+      }
+
+      .footer__col-contact {
+        flex: 1.4;
+        min-width: 150px;
+      }
+
+      /* Desktop: always show lists, remove accordion chrome */
+      .footer__col-list {
+        display: flex !important;
+        padding: var(--spacing-sm) 0 0;
+      }
+
+      .footer__col-header {
+        cursor: default;
+        pointer-events: none;
+        border-bottom: none;
+        padding-bottom: 0;
+      }
+
+      .footer__col-header svg {
+        display: none;
+      }
+
+      .footer__bottom {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: var(--spacing-md) var(--container-gutter);
+      }
+
+      .footer__social {
+        flex-shrink: 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ============================================================
+       ANNOUNCEMENT BAR
+  ============================================================ -->
+  <!-- SHOPIFY MIGRATION NOTE: announcement-bar.liquid section -->
+  <aside class="announcement-bar" role="complementary" aria-label="Announcement">
+    American Made. Veteran Owned.
+  </aside>
+
+  <!-- ============================================================
+       HEADER
+  ============================================================ -->
+  <!-- SHOPIFY MIGRATION NOTE: Rendered by header.liquid with predictive search drawer and cart drawer sections -->
+  <header class="site-header" role="banner">
+
+    <!-- Mobile nav drawer -->
+    <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation" role="dialog" aria-modal="true">
+      <button class="mobile-nav__close" id="mobile-nav-close" aria-label="Close navigation">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+      </button>
+      <p class="mobile-nav__title">Menu</p>
+      <ul class="mobile-nav__list">
+        <li>
+          <a href="#">SEATS
+            <svg viewBox="0 0 10 6"><path d="M1 1l4 4 4-4" stroke-linecap="round"/></svg>
+          </a>
+        </li>
+        <li>
+          <a href="#">ACCESSORIES
+            <svg viewBox="0 0 10 6"><path d="M1 1l4 4 4-4" stroke-linecap="round"/></svg>
+          </a>
+        </li>
+        <li><a href="#">CUSTOM SEATS</a></li>
+        <li><a href="#">ABOUT US</a></li>
+        <li>
+          <a href="#">RESOURCES
+            <svg viewBox="0 0 10 6"><path d="M1 1l4 4 4-4" stroke-linecap="round"/></svg>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="header__inner">
+
+      <!-- Hamburger (mobile) -->
+      <button
+        class="header__hamburger"
+        id="hamburger-btn"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+        aria-controls="mobile-nav"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <!-- Left nav (desktop) -->
+      <nav class="header__nav header__nav--left" aria-label="Primary navigation">
+        <ul class="nav-list">
+          <li class="nav-item" data-dropdown>
+            <button class="nav-item__trigger" aria-expanded="false" aria-haspopup="true">
+              SEATS
+              <svg class="nav-item__chevron" viewBox="0 0 10 6"><path d="M1 1l4 4 4-4" stroke-linecap="round"/></svg>
+            </button>
+            <div class="nav-dropdown" role="menu">
+              <a href="#" role="menuitem">Solo Seats</a>
+              <a href="#" role="menuitem">2-Up Seats</a>
+              <a href="#" role="menuitem">Touring Seats</a>
+              <a href="#" role="menuitem">Pillion Pads</a>
+            </div>
+          </li>
+          <li class="nav-item" data-dropdown>
+            <button class="nav-item__trigger" aria-expanded="false" aria-haspopup="true">
+              ACCESSORIES
+              <svg class="nav-item__chevron" viewBox="0 0 10 6"><path d="M1 1l4 4 4-4" stroke-linecap="round"/></svg>
+            </button>
+            <div class="nav-dropdown" role="menu">
+              <a href="#" role="menuitem">Backrests</a>
+              <a href="#" role="menuitem">Armrests</a>
+              <a href="#" role="menuitem">Seat Pads</a>
+              <a href="#" role="menuitem">Hardware Kits</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-item__trigger" href="#">CUSTOM SEATS</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Logo (center) — matches Shopify site wordmark -->
+      <a href="#" class="header__logo" aria-label="Mustang Motorcycle Seats — Home">
+        <div class="header__logo-text">
+          <span class="header__logo-wordmark">MUSTANG</span>
+          <span class="header__logo-subtitle">MOTORCYCLE SEATS</span>
+        </div>
+      </a>
+
+      <!-- Right nav (desktop) -->
+      <nav class="header__nav header__nav--right" aria-label="Secondary navigation">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a class="nav-item__trigger" href="#">ABOUT US</a>
+          </li>
+          <li class="nav-item" data-dropdown>
+            <button class="nav-item__trigger" aria-expanded="false" aria-haspopup="true">
+              RESOURCES
+              <svg class="nav-item__chevron" viewBox="0 0 10 6"><path d="M1 1l4 4 4-4" stroke-linecap="round"/></svg>
+            </button>
+            <div class="nav-dropdown" role="menu">
+              <a href="#" role="menuitem">Mounting Instructions</a>
+              <a href="#" role="menuitem">Seat Care &amp; Repair</a>
+              <a href="#" role="menuitem">FAQs</a>
+              <a href="#" role="menuitem">Warranty Information</a>
+              <a href="#" role="menuitem">Dealer Locator</a>
+            </div>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Icons -->
+      <div class="header__icons">
+        <button class="header__icon-btn" aria-label="Search">
+          <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        </button>
+        <button class="header__icon-btn" aria-label="Account">
+          <svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </button>
+        <button class="header__icon-btn" aria-label="Cart (0 items)">
+          <svg viewBox="0 0 24 24"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ============================================================
+         HERO
+    ============================================================ -->
+    <!-- SHOPIFY MIGRATION NOTE: Hero Video section — swap <img> for Shopify video/image block -->
+    <section class="hero" aria-label="Hero — Mustang seat on a Harley-Davidson motorcycle">
+      <img
+        class="hero__image"
+        src="images/Hero Image.png"
+        alt="Mustang Super Touring seat with grey contrast stitching and passenger backrest installed on a Harley-Davidson CVO touring motorcycle, viewed from the side"
+        width="1440"
+        height="630"
+        loading="eager"
+        fetchpriority="high"
+      />
+    </section>
+
+    <!-- ============================================================
+         INTRO
+    ============================================================ -->
+    <!-- SHOPIFY MIGRATION NOTE: Rich text section -->
+    <section class="intro" aria-labelledby="intro-title">
+      <div class="intro__inner">
+        <p class="intro__eyebrow">New For 2025</p>
+        <h1 class="intro__title" id="intro-title">Your Stock Seat Had It's Chance</h1>
+        <p class="intro__subtitle">
+          Meet Five New Mustang Seats Engineered to Fix What Your Factory Seat Got Wrong.
+        </p>
+        <p class="intro__compat">
+          Designed for Harley-Davidson™ 2023–2026 Street Glide&reg;, Road Glide&reg;,
+          Road King&reg;, and Electra Glide&reg; models.
+        </p>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         PRODUCT GRID
+    ============================================================ -->
+    <!-- SHOPIFY MIGRATION NOTE: Media grid / collection list section with metafield for SKU -->
+    <section class="product-grid" aria-labelledby="product-grid-title">
+      <p class="product-grid__section-title" id="product-grid-title">The New Lineup</p>
+
+      <div class="product-grid__grid">
+
+        <!-- Card 1 -->
+        <article class="product-grid__item" tabindex="0" role="button" aria-label="Super Touring Standard Reach — One Piece 2-Up, SKU 89412GM">
+          <div class="product-grid__image-wrap">
+            <img
+              src="images/Image.png"
+              alt="Mustang Super Touring Standard Reach One Piece 2-Up seat for Harley-Davidson Street Glide and Road Glide — SKU 89412GM"
+              width="600"
+              height="600"
+              loading="lazy"
+            />
+          </div>
+          <div class="product-grid__info">
+            <p class="product-grid__label">Super Touring Standard Reach</p>
+            <h2 class="product-grid__name">One Piece 2-Up</h2>
+            <p class="product-grid__sku">SKU: 89412GM</p>
+          </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="product-grid__item" tabindex="0" role="button" aria-label="Super Touring Standard Reach — One Piece 2-Up, SKU 89413">
+          <div class="product-grid__image-wrap">
+            <img
+              src="images/Image-1.png"
+              alt="Mustang Super Touring Standard Reach One Piece 2-Up seat, smooth top variant for Harley-Davidson — SKU 89413"
+              width="600"
+              height="600"
+              loading="lazy"
+            />
+          </div>
+          <div class="product-grid__info">
+            <p class="product-grid__label">Super Touring Standard Reach</p>
+            <h2 class="product-grid__name">One Piece 2-Up</h2>
+            <p class="product-grid__sku">SKU: 89413</p>
+          </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="product-grid__item" tabindex="0" role="button" aria-label="Reduced Reach — Touring Solo, SKU 89470">
+          <div class="product-grid__image-wrap">
+            <img
+              src="images/Image-2.png"
+              alt="Mustang Reduced Reach Touring Solo seat with driver backrest for Harley-Davidson — SKU 89470"
+              width="600"
+              height="600"
+              loading="lazy"
+            />
+          </div>
+          <div class="product-grid__info">
+            <p class="product-grid__label">Reduced Reach</p>
+            <h2 class="product-grid__name">Touring Solo</h2>
+            <p class="product-grid__sku">SKU: 89470</p>
+          </div>
+        </article>
+
+        <!-- Card 4 -->
+        <article class="product-grid__item" tabindex="0" role="button" aria-label="Reduced Reach — Touring Passenger, SKU 88471">
+          <div class="product-grid__image-wrap">
+            <img
+              src="images/Image-3.png"
+              alt="Mustang Reduced Reach Touring Passenger seat for Harley-Davidson — SKU 88471"
+              width="600"
+              height="600"
+              loading="lazy"
+            />
+          </div>
+          <div class="product-grid__info">
+            <p class="product-grid__label">Reduced Reach</p>
+            <h2 class="product-grid__name">Touring Passenger</h2>
+            <p class="product-grid__sku">SKU: 88471</p>
+          </div>
+        </article>
+
+        <!-- Card 5 — Featured full-width -->
+        <article class="product-grid__item product-grid__item--featured" tabindex="0" role="button" aria-label="Deluxe Touring Extended Reach Solo Without Driver Backrest Receiver — SKU 88401">
+          <div class="product-grid__image-wrap">
+            <img
+              src="images/4.png"
+              alt="Mustang Deluxe Touring Extended Reach Solo seat without driver backrest receiver, installed on a Harley-Davidson CVO Road Glide — SKU 88401"
+              width="1440"
+              height="560"
+              loading="lazy"
+            />
+          </div>
+          <div class="product-grid__info">
+            <p class="product-grid__label">Deluxe Touring Extended Reach Solo</p>
+            <h2 class="product-grid__name">Without Driver Backrest Receiver</h2>
+            <p class="product-grid__sku">SKU: 88401</p>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ============================================================
+         CROSSSELL
+    ============================================================ -->
+    <!-- SHOPIFY MIGRATION NOTE: Image with text overlay section -->
+    <div class="crosssell-wrapper">
+    <section class="crosssell" aria-labelledby="crosssell-title">
+      <div class="crosssell__image-wrap">
+        <img
+          src="images/5.png"
+          alt="Mustang motorcycle passenger seat displayed from above on a rich red textured background, highlighting the brand's broad model compatibility"
+          width="720"
+          height="560"
+          loading="lazy"
+        />
+      </div>
+      <div class="crosssell__content">
+        <p class="crosssell__eyebrow">Explore The Full Lineup</p>
+        <h2 class="crosssell__title" id="crosssell-title">Shopping For Another Bike?</h2>
+        <p class="crosssell__body">
+          Mustang makes seats for dozens of motorcycle models — not just Harley-Davidson.
+          Whether you ride a Honda Goldwing, an Indian Roadmaster, or a Yamaha Star, we have
+          an upgrade engineered for your specific frame, your ride position, and your miles.
+        </p>
+        <a href="#" class="crosssell__cta" role="button">Find Your Fit</a>
+      </div>
+    </section>
+    </div>
+
+  </main>
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <!-- SHOPIFY MIGRATION NOTE: footer.liquid group section -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer__main">
+      <div class="footer__grid">
+
+        <!-- Column 1: Brand + Newsletter -->
+        <div class="footer__col-brand">
+          <div class="footer__logo-wrap">
+            <!-- White footer logo — swap for <img src="logo-white.svg"> in Shopify -->
+            <svg width="200" height="42" viewBox="0 0 260 44" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Mustang Motorcycle Seats" role="img">
+              <g fill="#ffffff">
+                <path d="M10 22 Q14 12 22 10 Q18 16 20 22 Q16 20 10 22Z"/>
+                <path d="M20 22 Q22 14 30 12 Q26 18 28 24 Q24 22 20 22Z"/>
+                <path d="M14 22 Q10 28 12 34 Q16 28 22 26 Q18 26 14 22Z"/>
+                <ellipse cx="25" cy="20" rx="6" ry="4" transform="rotate(-15 25 20)"/>
+                <path d="M30 16 Q38 8 44 12 Q36 14 34 20Z"/>
+              </g>
+              <text x="50" y="28" font-family="'Barlow Condensed', Arial Narrow, Arial, sans-serif" font-weight="800" font-size="20" letter-spacing="3" fill="#ffffff" text-anchor="start">MUSTANG SEATS</text>
+            </svg>
+          </div>
+          <p class="footer__newsletter-label">Sign Up For Our Newsletter</p>
+          <form class="footer__newsletter-form" action="#" method="post" aria-label="Newsletter signup">
+            <label for="footer-email" class="visually-hidden">Email address</label>
+            <input
+              class="footer__newsletter-input"
+              type="email"
+              id="footer-email"
+              name="email"
+              placeholder="Enter your email"
+              autocomplete="email"
+              required
+            />
+            <button class="footer__newsletter-submit" type="submit" aria-label="Submit email">
+              <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+          </form>
+        </div>
+
+        <!-- Column 2: Shop -->
+        <div class="footer__col" id="footer-col-shop">
+          <button class="footer__col-header" aria-expanded="false" aria-controls="footer-list-shop">
+            Shop
+            <svg viewBox="0 0 10 6"><path d="M1 1l4 4 4-4" stroke-linecap="round"/></svg>
+          </button>
+          <ul class="footer__col-list" id="footer-list-shop" role="list">
+            <li><a href="#">All Products</a></li>
+            <li><a href="#">New Arrivals</a></li>
+            <li><a href="#">Best Sellers</a></li>
+            <li><a href="#">Custom Seats</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Mustang Seats -->
+        <div class="footer__col" id="footer-col-brand">
+          <button class="footer__col-header" aria-expanded="false" aria-controls="footer-list-brand">
+            Mustang Seats
+            <svg viewBox="0 0 10 6"><path d="M1 1l4 4 4-4" stroke-linecap="round"/></svg>
+          </button>
+          <ul class="footer__col-list" id="footer-list-brand" role="list">
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Rallies &amp; Events</a></li>
+            <li><a href="#">Brand Ambassador Application</a></li>
+            <li><a href="#">Dealer Locator</a></li>
+            <li><a href="#">Mounting Instructions</a></li>
+            <li><a href="#">Seat Care, Repair &amp; Recovering</a></li>
+            <li><a href="#">Factory Tours</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Customer Service -->
+        <div class="footer__col" id="footer-col-service">
+          <button class="footer__col-header" aria-expanded="false" aria-controls="footer-list-service">
+            Customer Service
+            <svg viewBox="0 0 10 6"><path d="M1 1l4 4 4-4" stroke-linecap="round"/></svg>
+          </button>
+          <ul class="footer__col-list" id="footer-list-service" role="list">
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">My Account</a></li>
+            <li><a href="#">FAQs</a></li>
+            <li><a href="#">Return Policy</a></li>
+            <li><a href="#">Warranty Information</a></li>
+            <li><a href="#">Shipping &amp; International Orders</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 5: CTA Buttons -->
+        <div class="footer__col-contact">
+          <a href="#" class="footer__btn footer__btn--primary">Contact Us</a>
+          <a href="#" class="footer__btn footer__btn--outline">Login</a>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Bottom bar -->
+    <div class="footer__bottom">
+      <div class="footer__legal">
+        <span>&copy; 2025 Mustang Motorcycle Products, Inc. All rights reserved.</span>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">MAP Policy</a>
+        <a href="#">Sears Marketplace</a>
+        <span>1-800-MUSTANG</span>
+        <a href="mailto:info@mustangseats.com">info@mustangseats.com</a>
+      </div>
+      <div class="footer__social" aria-label="Social media links">
+        <!-- Instagram -->
+        <a href="https://www.instagram.com/mustangseats/" class="footer__social-link" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/>
+          </svg>
+        </a>
+        <!-- Facebook -->
+        <a href="https://www.facebook.com/MustangSeats/" class="footer__social-link" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+          </svg>
+        </a>
+        <!-- YouTube -->
+        <a href="https://www.youtube.com/@OfficialMustangMotorcycleSeats" class="footer__social-link" aria-label="YouTube" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================
+       INLINE JAVASCRIPT
+  ========================================================== -->
+  <script>
+    (function () {
+      'use strict';
+
+      /* ---- Mobile nav toggle ---- */
+      var hamburger = document.getElementById('hamburger-btn');
+      var mobileNav = document.getElementById('mobile-nav');
+      var mobileClose = document.getElementById('mobile-nav-close');
+
+      function openMobileNav() {
+        mobileNav.classList.add('is-open');
+        hamburger.setAttribute('aria-expanded', 'true');
+        document.body.style.overflow = 'hidden';
+        mobileClose.focus();
+      }
+
+      function closeMobileNav() {
+        mobileNav.classList.remove('is-open');
+        hamburger.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+        hamburger.focus();
+      }
+
+      hamburger.addEventListener('click', function () {
+        var isOpen = mobileNav.classList.contains('is-open');
+        if (isOpen) {
+          closeMobileNav();
+        } else {
+          openMobileNav();
+        }
+      });
+
+      mobileClose.addEventListener('click', closeMobileNav);
+
+      // Close on Escape key
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && mobileNav.classList.contains('is-open')) {
+          closeMobileNav();
+        }
+      });
+
+      /* ---- Desktop dropdown nav ---- */
+      var dropdownItems = document.querySelectorAll('.nav-item[data-dropdown]');
+
+      dropdownItems.forEach(function (item) {
+        var trigger = item.querySelector('.nav-item__trigger');
+
+        trigger.addEventListener('click', function (e) {
+          e.stopPropagation();
+          var isOpen = item.classList.contains('is-open');
+
+          // Close all other dropdowns
+          dropdownItems.forEach(function (other) {
+            if (other !== item) {
+              other.classList.remove('is-open');
+              var otherTrigger = other.querySelector('.nav-item__trigger');
+              if (otherTrigger) otherTrigger.setAttribute('aria-expanded', 'false');
+            }
+          });
+
+          item.classList.toggle('is-open', !isOpen);
+          trigger.setAttribute('aria-expanded', String(!isOpen));
+        });
+      });
+
+      // Close dropdowns when clicking outside
+      document.addEventListener('click', function () {
+        dropdownItems.forEach(function (item) {
+          item.classList.remove('is-open');
+          var trigger = item.querySelector('.nav-item__trigger');
+          if (trigger) trigger.setAttribute('aria-expanded', 'false');
+        });
+      });
+
+      /* ---- Footer accordion (mobile) ---- */
+      var footerColHeaders = document.querySelectorAll('.footer__col-header');
+
+      footerColHeaders.forEach(function (header) {
+        header.addEventListener('click', function () {
+          var col = header.closest('.footer__col');
+          var isOpen = col.classList.contains('is-open');
+          col.classList.toggle('is-open', !isOpen);
+          header.setAttribute('aria-expanded', String(!isOpen));
+        });
+      });
+
+      /* ---- Product card keyboard accessibility ---- */
+      var productCards = document.querySelectorAll('.product-grid__item[role="button"]');
+
+      productCards.forEach(function (card) {
+        card.addEventListener('keydown', function (e) {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            card.click();
+          }
+        });
+      });
+
+      /* ---- Newsletter form ---- */
+      var newsletterForm = document.querySelector('.footer__newsletter-form');
+      if (newsletterForm) {
+        newsletterForm.addEventListener('submit', function (e) {
+          e.preventDefault();
+          var input = newsletterForm.querySelector('.footer__newsletter-input');
+          if (input && input.value) {
+            alert('Thank you for subscribing! (Demo — no submission sent.)');
+            input.value = '';
+          }
+        });
+      }
+
+    })();
+  </script>
+
+</body>
+</html>
